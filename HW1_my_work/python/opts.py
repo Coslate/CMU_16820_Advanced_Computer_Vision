@@ -27,6 +27,8 @@ def get_opts():
     ## Additional options (add your own hyperparameters here)
     parser.add_argument("--input_src_file", "-in_srcf", help="the file path for 'ar_source.mov'")
     parser.add_argument("--input_dst_file", "-in_dstf", help="the file path for 'book.mov'.")
+    parser.add_argument("--input_left_img_file", "-in_limg", help="the file path of left image.")
+    parser.add_argument("--input_right_img_file", "-in_rimg", help="the file path of right image.")
     parser.add_argument("--output_file", "-out_f", help="the file path for output generated video.")
     parser.add_argument("--is_debug", "-isd", help="1 for debug mode; 0 for normal mode.")
 
