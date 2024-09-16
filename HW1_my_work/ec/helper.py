@@ -51,11 +51,8 @@ def computePixel(img, idx1, idx2, width, center):
 
 def computeBrief(img, locs):
 
-    #patchWidth = 9
-    #nbits = 256
-
     patchWidth = 9
-    nbits = 64
+    nbits = 256
 
     compareX, compareY = makeTestPattern(patchWidth,nbits)
     m, n = img.shape
