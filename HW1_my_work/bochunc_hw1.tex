@@ -614,16 +614,60 @@
 		\caption{Q3.2 ar\_ec.py Code Snippet 3}
 		\label{fig:Q32_ar_ec_cns3}
 	\end{figure}
-	\hangindent=0.1em \hspace{0.1em}There is another input argument that I originally developed to further speedup, but I currently do not use. It is the --frame\_interval\_same. It is used to bypass some frames that can use the same homography as previous frame. The reason that one can do it is to assume that the targeted frames will not have large movement over 'frame\_interval\_same' frames. Under this assumption, the mapping of homography can be deemed as nearly unchanged. The default value of this argument is set to 2 as I think that data/book.mov does not have big motion between continuous frames. Although I can use it to further speedup my performance, which may be up to 50 FPS, I do not turn it on by setting this argument to 1 , like the one specified in ec/README.md, because I have already reached the performance over 30 FPS without the usage of this argument.
+	\hangindent=0.1em \hspace{0.1em}There is another input argument that I originally developed to further speedup, but I currently do not use it. It is the --frame\_interval\_same. It is used to bypass some frames by using the same homography as previous frame. The reason that one can do it is to assume that the targeted frames will not have large movement over 'frame\_interval\_same' frames. Under this assumption, the mapping of homography can be deemed as nearly unchanged. The default value of this argument is set to 2 as I think that data/book.mov does not have big motion between continuous frames. Although I can use it to further speedup my performance, which may be up to 50 FPS, I do not turn it on by setting this argument to 1 , as the command specified in ec/README.md, because I have already reached the performance over 30 FPS without the usage of this argument.
 
 	\newpage
 	\subsection*{Q4 at page 10}
 	Ans:\\
-	\hangindent=0.4em \hspace{0.3em} In
+	\hangindent=0.4em \hspace{0.3em} Figure \ref{fig:Q4_input_left_img} shows my input left image, and Figure \ref{fig:Q4_input_right_img} shows my input right image, and Figure \ref{fig:Q4_result_pano} shows the result of generated panorama. Figure \ref{fig:Q4_cns1} - Figure \ref{fig:Q4_cns3} show my snippets of code that implement panorama.py.
 
+	\begin{figure}[H]
+	\centering
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{./data/my_pano_left.jpg}  % Replace with your image file
+		\caption{Q4. My Input Left Image}
+		\label{fig:Q4_input_left_img}
+	\end{minipage}
+	\hfill  % This adds space between the images
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{./data/my_pano_right.jpg}  % Replace with your image file
+		\caption{Q4. My Input Right Image}
+		\label{fig:Q4_input_right_img}
+	\end{minipage}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\textwidth]{./result_panorama/Q4_Panorama_Result.png}  % Replace with your image file
+		\caption{Q4. Result of Panorama}
+		\label{fig:Q4_result_pano}
+	\end{figure}	
 
-
-
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{./Q4_pano_cns1.png}  % Replace with your image file
+		\caption{Q4. Code Snippet 1}
+		\label{fig:Q4_cns1}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{./Q4_pano_cns2.png}  % Replace with your image file
+		\caption{Q4. Code Snippet 2}
+		\label{fig:Q4_cns2}
+	\end{figure}	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{./Q4_pano_cns3.png}  % Replace with your image file
+		\caption{Q4. Code Snippet 3}
+		\label{fig:Q4_cns3}
+	\end{figure}	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{./Q4_pano_cns3.png}  % Replace with your image file
+		\caption{Q4. Code Snippet 3}
+		\label{fig:Q4_cns3}
+	\end{figure}
 
 	
 \end{document}

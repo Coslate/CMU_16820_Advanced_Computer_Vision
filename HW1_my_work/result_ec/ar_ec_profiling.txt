@@ -1,1 +1,1 @@
-Total Speed = 1/(total_time/total_frames) = 31.13726077249852 FPS
+Total Speed = 1/(total_time/total_frames) = 32.858050474978405 FPS
