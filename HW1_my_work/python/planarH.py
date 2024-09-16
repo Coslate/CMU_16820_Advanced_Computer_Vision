@@ -28,6 +28,7 @@ def computeH(x1, x2):
     # Choose the eigenvector w/ smallest eigenvalues
     smallest_eigenvec = eigenvec[:, np.argsort(eigenval)[0]]
     H2to1 = np.reshape(smallest_eigenvec, (3, 3))
+    H2to1 = np.array(H2to1, dtype=np.float32)
 
     #test
     '''
@@ -50,6 +51,7 @@ def computeDist(x, cx):
 def computeLongestDist(x, cx):
     # x : np.array: (N, 2)
     # cx: np.array: (2,)
+    '''
     dist = -1
     cand = np.array([0, 0])
     for xi in x:
@@ -59,6 +61,8 @@ def computeLongestDist(x, cx):
             cand[0] = xi[0]
             cand[1] = xi[1]
     return dist, cand
+    '''
+    return np.max(np.sqrt(np.sum((x-cx)**2, axis=1)))
 
 def computeH_norm(x1, x2):
     #Q2.2.2
@@ -83,8 +87,8 @@ def computeH_norm(x1, x2):
     # TODO: Normalize the points so that the largest distance from the origin is equal to sqrt(2)
     # Merge these two TODO to form T1 and T2
     # Calculate the largest distance from the center (cx1, cy1), (cx2, cy2)
-    longest_dist1, cand1 = computeLongestDist(x1, c1)
-    longest_dist2, cand2 = computeLongestDist(x2, c2)
+    longest_dist1 = computeLongestDist(x1, c1)
+    longest_dist2 = computeLongestDist(x2, c2)
     norm_factor1 = np.sqrt(2)/longest_dist1
     norm_factor2 = np.sqrt(2)/longest_dist2
 
@@ -101,9 +105,9 @@ def computeH_norm(x1, x2):
     # TODO: Similarity transform 1
     T1 = np.zeros((3, 3))
     T1[0][0] = norm_factor1
-    T1[0][2] = -c1[0]
+    T1[0][2] = -norm_factor1*c1[0]
     T1[1][1] = norm_factor1
-    T1[1][2] = -c1[1]
+    T1[1][2] = -norm_factor1*c1[1]
     T1[2][2] = 1
     x1_homo = np.hstack([x1, np.ones((x1.shape[0], 1))]) #Nx3
     x1_norm = T1@x1_homo.T #3xN
@@ -124,9 +128,9 @@ def computeH_norm(x1, x2):
     # TODO: Similarity transform 2
     T2 = np.zeros((3, 3))
     T2[0][0] = norm_factor2
-    T2[0][2] = -c2[0]
+    T2[0][2] = -norm_factor2*c2[0]
     T2[1][1] = norm_factor2
-    T2[1][2] = -c2[1]
+    T2[1][2] = -norm_factor2*c2[1]
     T2[2][2] = 1
     x2_homo = np.hstack([x2, np.ones((x2.shape[0], 1))]) #Nx3
     x2_norm = T2@x2_homo.T #3xN
@@ -163,7 +167,7 @@ def computeH_norm(x1, x2):
 
     return H2to1
 
-def computeH_ransac(locs1, locs2, opts):
+def computeH_ransac(locs1, locs2, opts, fit_inlier_last: bool = False, fit_inlier_last_num: int = 4):
     #Q2.2.3
     #Compute the best fitting homography given a list of matching points
     max_iters = opts.max_iters  # the number of iterations to run RANSAC for
@@ -191,28 +195,32 @@ def computeH_ransac(locs1, locs2, opts):
         locs1_col2 = locs1_recover_all[:, 1]/locs1_recover_all[:, 2]
         locs1_recover_all = np.column_stack((locs1_col1, locs1_col2)) #Nx2
 
-        inliers = np.zeros(locs1.shape[0], dtype = int)
+        distance_sq = np.sum((locs1_recover_all-locs1)**2, axis=1)
+        inliers = distance_sq <= inlier_tol**2
+        '''
         for i in range(locs1_recover_all.shape[0]):
             recovered_pt = locs1_recover_all[i]
             original_pt  = locs1[i]
             dist = computeDist(recovered_pt, original_pt)
             if dist < inlier_tol:
                 inliers[i] = 1
+        '''
 
-        inlier_num = np.sum(inliers==1)
+        inlier_num = np.sum(inliers)
         if inlier_num > max_inlier_num:
             max_inlier_num = inlier_num
             max_inliers    = inliers
             bestH2to1 = H2to1
 
     inliers = max_inliers
-    indices = [i for i, x in enumerate(inliers) if x == 1]
 
     #Fit the inlier again
-    if len(indices) >= 4:
-        locs1_opt = locs1[indices, :]
-        locs2_opt = locs2[indices, :]
-        bestH2to1 = computeH_norm(locs1_opt, locs2_opt)
+    if fit_inlier_last:
+        indices = [i for i, x in enumerate(inliers) if x == 1]
+        if len(indices) >= fit_inlier_last_num:
+            locs1_opt = locs1[indices, :]
+            locs2_opt = locs2[indices, :]
+            bestH2to1 = computeH_norm(locs1_opt, locs2_opt)
 
     #test
     '''
@@ -249,12 +257,18 @@ def compositeH(H2to1, template, img):
     warped_template = cv2.warpPerspective(template, H2to1, (img.shape[1], img.shape[0]))
 
     # TODO: Use mask to combine the warped template and the image
+    inverse_mask    = cv2.bitwise_not(warped_mask)
+    masked_template = cv2.bitwise_and(warped_template, warped_template, mask=warped_mask)
+    masked_img      = cv2.bitwise_and(img, img, mask=inverse_mask)
+    composite_img   = cv2.add(masked_template, masked_img)
+    '''
     for i in range(img.shape[0]):
         for j in range(img.shape[1]):
             if warped_mask[i, j] == 255:
                 composite_img[i, j] = warped_template[i, j]
             else:
                 composite_img[i, j] = img[i, j]
+    '''
 
     return composite_img
 

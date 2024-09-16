@@ -25,6 +25,10 @@ def get_opts():
                         help='the tolerance value for considering a point to be an inlier')
 
     ## Additional options (add your own hyperparameters here)
+    parser.add_argument("--input_src_file", "-in_srcf", help="the file path for 'ar_source.mov'")
+    parser.add_argument("--input_dst_file", "-in_dstf", help="the file path for 'book.mov'.")
+    parser.add_argument("--output_file", "-out_f", help="the file path for output generated video.")
+    parser.add_argument("--is_debug", "-isd", help="1 for debug mode; 0 for normal mode.")
 
     ##
     opts = parser.parse_args()

@@ -26,7 +26,7 @@ def warpImage(opts):
     x2 = locs2[matches[:, 1], :]
     x1_correct_pt = np.flip(x1, axis=1)
     x2_correct_pt = np.flip(x2, axis=1)
-    H2to1_ransac, inliers = computeH_ransac(x1_correct_pt, x2_correct_pt, opts)
+    H2to1_ransac, inliers = computeH_ransac(x1_correct_pt, x2_correct_pt, opts, fit_inlier_last=True, fit_inlier_last_num=4)
 
     # Resize the image_hp_cover to the size of image_cv_cover
     resize_image_hp_cover = cv2.resize(image_hp_cover, (image_cv_cover.shape[1], image_cv_cover.shape[0]))
