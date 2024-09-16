@@ -11,6 +11,7 @@ from matchPics_profiling import matchPics
 from planarH import computeH_ransac
 import time
 import os
+import shutil
 
 #Write script for Q3.1
 
@@ -21,7 +22,11 @@ def main():
     # Input arguments/Load input videos
     opts = get_opts()
     out_folder = os.path.dirname(opts.output_file)
-    if not os.path.exists(out_folder): os.makedirs(out_folder)
+    if not os.path.exists(out_folder): 
+        os.makedirs(out_folder)
+    else: 
+        shutil.rmtree(out_folder)
+        os.makedirs(out_folder)
     frames_ar_source = loadVid(opts.input_src_file)
     frames_book      = loadVid(opts.input_dst_file)
 
@@ -63,18 +68,19 @@ def generalHarryPoterize(frame_ar_source: List[Any], frames_book: List[Any], opt
     time_composite = 0
 
     last_time_homo_incre = 0
+    total_time = 0
 
     for i in range(min_len):
         if i==60: break
         # Compute Homography
-        #start_match = time.perf_counter()
+        start_match_out = time.perf_counter()
         matches, locs1, locs2, time_crn_dt, time_brief, time_match = matchPics(frames_book[i], image_cv_cover, opts, time_crn_dt, time_brief, time_match, i, report_str)
         x1 = locs1[matches[:, 0], :]
         x2 = locs2[matches[:, 1], :]
         x1_correct_pt = np.flip(x1, axis=1)
         x2_correct_pt = np.flip(x2, axis=1)
-        #end_match = time.perf_counter()
-        #time_match = end_match - start_match
+        end_match_out = time.perf_counter()
+        time_match_out = end_match_out - start_match_out
 
         try:
             start_homo = time.perf_counter()
@@ -102,6 +108,7 @@ def generalHarryPoterize(frame_ar_source: List[Any], frames_book: List[Any], opt
         composite_img = compositeH(H2to1_ransac, resize_image_ar_cover, frames_book[i])
         end_composite = time.perf_counter()
         time_composite = end_composite - start_composite
+        total_time += time_match_out + time_homo + time_resize + time_composite
 
 
         last_H = H2to1_ransac
@@ -116,37 +123,13 @@ def generalHarryPoterize(frame_ar_source: List[Any], frames_book: List[Any], opt
             print(f"i = {i}, progress = {(i+1)/min_len*100}%")
             report_str.append(f"{i} frame: \ntime_crn_dt = {time_crn_dt}\ntime_brief = {time_brief}\ntime_match = {time_match}\ntime_homo = {time_homo}\ntime_resize = {time_resize}\ntime_composite = {time_composite}\n-------------------------\n")
             print(f"{report_str[-1]}")
-            
 
-        #cv2.imshow("composite_img", composite_img)
-        #cv2.waitKey(3000)
-        #cv2.destroyAllWindows()
-
-        # Stop if 'q' is pressed
-        #if cv2.waitKey(1) & 0xFF == ord('q'):
-        #    break
-        '''
-        cv2.imshow("image_ar_cover", image_ar_cover)
-        cv2.imshow("resize_image_ar_cover", resize_image_ar_cover)
-        cv2.imshow("image_cv_cover", image_cv_cover)
-        cv2.imshow("composite_img", composite_img)
-        cv2.imshow("frame_ar_source", frame_ar_source[i])
-        cv2.imshow("frame_book", frames_book[i])
-        cv2.waitKey(0)
-        cv2.waitKey(0)
-        cv2.waitKey(0)
-        cv2.waitKey(0)
-        cv2.waitKey(0)
-        cv2.waitKey(0)
-        cv2.waitKey(0)
-        cv2.waitKey(0)
-        cv2.waitKey(0)
-        cv2.waitKey(0)
-        '''
-
+    result_fps = f"Total Speed = 1/(total_time/total_frames) = {1/(total_time/60)} FPS\n"
+    print(result_fps)
     with open(f"{out_folder}/ar_profiling.txt", "w") as f:
         for line in report_str:
             f.write(line)
+        f.write(result_fps)
 
     return frame_result
 

@@ -4,6 +4,7 @@
 \usepackage{latexsym,amsfonts,amssymb,amsthm,amsmath}
 \usepackage[a4paper,margin=1in]{geometry} % Adjust margins as needed
 \usepackage{float}
+\usepackage{hyperref}
 
 
 \setlength{\parindent}{0in}
@@ -281,29 +282,18 @@
 	\newpage
 	\subsection*{Q2.1.4 at page 5}
 	Ans:\\
-	\hangindent=1.5em \hspace{1.5em} The best output is as the following \ref{fig:best_output}, and the corresponding code snippets are as the following \ref{fig:csn1} and \ref{fig:csn2}. The sigma is set to 0.08, and ration is set to 0.61.
-	\begin{figure}[h]		
+	\hangindent=1.5em \hspace{1.5em} The best output is as the following Figure \ref{fig:best_output}, and the corresponding code snippets are as the following Figure \ref{fig:csn1}. The sigma is set to 0.08, and ration is set to 0.61.
+	\begin{figure}[H]		
 		\centering
-		\includegraphics[width=0.8\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_1_4_best_output.png}  % Replace with your image file name
+		\includegraphics[width=0.8\textwidth]{Q2_1_4_best_output.png}  % Replace with your image file name
 		\caption{Best Output}
 		\label{fig:best_output}
 	\end{figure}
-
-	\begin{figure}[h]
-		\centering
-		\begin{minipage}[b]{0.45\textwidth}
-			\centering
-			\includegraphics[width=\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_1_4_best_output_code1.png}  % Replace with your image file
-			\caption{Q2.1.4 Code Snippet 1}
-			\label{fig:csn1}
-		\end{minipage}
-		\hfill  % This adds space between the images
-		\begin{minipage}[b]{0.45\textwidth}
-			\centering
-			\includegraphics[width=\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_1_4_best_output_code2.png}  % Replace with your image file
-			\caption{Q2.1.4 Code Snippet 2}
-			\label{fig:csn2}
-		\end{minipage}
+	\begin{figure}[H]		
+	\centering
+	\includegraphics[width=\textwidth]{Q2_1_4_best_output_code1.png}  % Replace with your image file
+	\caption{Q2.1.4 Code Snippet}
+	\label{fig:csn1}
 	\end{figure}
 	
 	\newpage
@@ -317,21 +307,21 @@
 			\hline
 			\textbf{Parameter sigma} & \textbf{Parameter ratio} & \textbf{Generated Image} \\
 			\hline
-			0.20 & 0.7 & \includegraphics[width=0.4\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_1_4_0.20_0.7.png} \\
+			0.20 & 0.7 & \includegraphics[width=0.4\textwidth]{Q2_1_4_0.20_0.7.png} \\
 			\hline
-			0.20 & 0.65 & \includegraphics[width=0.4\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_1_4_0.20_0.65.png} \\						
+			0.20 & 0.65 & \includegraphics[width=0.4\textwidth]{Q2_1_4_0.20_0.65.png} \\						
 			\hline
-			0.15 & 0.7 & \includegraphics[width=0.4\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_1_4_0.15_0.7.png} \\
+			0.15 & 0.7 & \includegraphics[width=0.4\textwidth]{Q2_1_4_0.15_0.7.png} \\
 			\hline
-			0.10 & 0.7 & \includegraphics[width=0.4\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_1_4_0.10_0.7.png} \\			
+			0.10 & 0.7 & \includegraphics[width=0.4\textwidth]{Q2_1_4_0.10_0.7.png} \\			
 			\hline
-			0.10 & 0.65 & \includegraphics[width=0.4\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_1_4_0.10_0.65.png} \\
+			0.10 & 0.65 & \includegraphics[width=0.4\textwidth]{Q2_1_4_0.10_0.65.png} \\
 			\hline
-			0.08 & 0.61 & \includegraphics[width=0.4\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_1_4_best_output.png} \\
+			0.08 & 0.61 & \includegraphics[width=0.4\textwidth]{Q2_1_4_best_output.png} \\
 			\hline
-			0.07 & 0.61 & \includegraphics[width=0.4\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_1_4_0.07_0.61.png} \\
+			0.07 & 0.61 & \includegraphics[width=0.4\textwidth]{Q2_1_4_0.07_0.61.png} \\
 			\hline
-			0.06 & 0.55 & \includegraphics[width=0.4\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_1_4_0.06_0.55.png} \\
+			0.06 & 0.55 & \includegraphics[width=0.4\textwidth]{Q2_1_4_0.06_0.55.png} \\
 			\hline
 		\end{tabular}
 		\caption{Parameter Changes and Corresponding Generated Images}
@@ -345,7 +335,7 @@
 	
 	\begin{figure}[H]		
 		\centering
-		\includegraphics[width=0.8\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_1_6.png}  % Replace with your image file name
+		\includegraphics[width=0.8\textwidth]{Q2_1_6.png}  % Replace with your image file name
 		\caption{Histogram Result}
 		\label{fig:hist_res}
 	\end{figure}	
@@ -354,14 +344,14 @@
 	\centering
 	\begin{minipage}[b]{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_1_6_cns1.png}  % Replace with your image file
+		\includegraphics[width=\textwidth]{Q2_1_6_cns1.png}  % Replace with your image file
 		\caption{Q2.1.6 Code Snippet 1}
 		\label{fig:2_14_6_csn1}
 	\end{minipage}
 	\hfill  % This adds space between the images
 	\begin{minipage}[b]{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_1_6_cns2.png}  % Replace with your image file
+		\includegraphics[width=\textwidth]{Q2_1_6_cns2.png}  % Replace with your image file
 		\caption{Q2.1.6 Code Snippet 2}
 		\label{fig:2_14_6_csn2}
 	\end{minipage}
@@ -378,7 +368,7 @@
 	\hangindent=0.4em \hspace{0.3em} Figure \ref{fig:Q221_cns} shows the code snippet.
 	\begin{figure}[H]		
 		\centering
-		\includegraphics[width=0.8\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_2_1.png}  % Replace with your image file name
+		\includegraphics[width=0.8\textwidth]{Q2_2_1.png}  % Replace with your image file name
 		\caption{Q2.2.1 Code Snippet}
 		\label{fig:Q221_cns}
 	\end{figure}
@@ -391,20 +381,20 @@
 	\centering
 	\begin{minipage}[b]{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_2_2_cns1.png}  % Replace with your image file
+		\includegraphics[width=\textwidth]{Q2_2_2_cns1.png}  % Replace with your image file
 		\caption{Q2.2.2 Code Snippet 1}
 		\label{fig:Q222_cns1}
 	\end{minipage}
 	\hfill  % This adds space between the images
 	\begin{minipage}[b]{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_2_2_cns2.png}  % Replace with your image file
+		\includegraphics[width=\textwidth]{Q2_2_2_cns2.png}  % Replace with your image file
 		\caption{Q2.2.2. Code Snippet 2}
 		\label{fig:Q222_csn2}
 	\end{minipage}
 	\begin{figure}[H]		
 		\centering
-		\includegraphics[width=0.8\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_2_2_cns3.png}  % Replace with your image file name
+		\includegraphics[width=0.8\textwidth]{Q2_2_2_cns3.png}  % Replace with your image file name
 		\caption{Q2.2.2 Code Snippet3}
 		\label{fig:Q222_cns3}
 	\end{figure}	
@@ -418,14 +408,14 @@
 	\centering
 	\begin{minipage}[b]{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_2_3_cns1.png}  % Replace with your image file
+		\includegraphics[width=\textwidth]{Q2_2_3_cns1.png}  % Replace with your image file
 		\caption{Q2.2.3 Code Snippet 1}
 		\label{fig:Q223_cns1}
 	\end{minipage}
 	\hfill  % This adds space between the images
 	\begin{minipage}[b]{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_2_3_cns2.png}  % Replace with your image file
+		\includegraphics[width=\textwidth]{Q2_2_3_cns2.png}  % Replace with your image file
 		\caption{Q2.2.3. Code Snippet 2}
 		\label{fig:Q223_csn2}
 	\end{minipage}	
@@ -438,7 +428,7 @@
 	The solution is to resize the hp\_cover.jpg to the size of cv\_cover.jpg as shown in Figure \ref{fig:Q224_warpImage_cns} line 32.
 	\begin{figure}[H]		
 	\centering
-	\includegraphics[width=0.8\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_2_4_result.png}  % Replace with your image file name
+	\includegraphics[width=0.8\textwidth]{Q2_2_4_result.png}  % Replace with your image file name
 	\caption{Q2.2.4 Result Image}
 	\label{fig:Q224_result}
 	\end{figure}	
@@ -446,14 +436,14 @@
 	\centering
 	\begin{minipage}[b]{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_2_4_warpImage_cns.png}  % Replace with your image file
+		\includegraphics[width=\textwidth]{Q2_2_4_warpImage_cns.png}  % Replace with your image file
 		\caption{Q2.2.4 warpImage() Code Snippet}
 		\label{fig:Q224_warpImage_cns}
 	\end{minipage}
 	\hfill  % This adds space between the images
 	\begin{minipage}[b]{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_2_4_compositH_cns.png}  % Replace with your image file
+		\includegraphics[width=\textwidth]{Q2_2_4_compositH_cns.png}  % Replace with your image file
 		\caption{Q2.2.4. CompositeH() Code Snippet}
 		\label{fig:Q224_compositeH_cns}
 	\end{minipage}	
@@ -472,17 +462,17 @@
 		\hline
 		\textbf{Parameter max\_iters} & \textbf{Parameter inlier\_tol} & \textbf{Composite Image} \\
 		\hline
-		500 & 2.0 & \includegraphics[width=0.27\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_2_5_500_2.0.png} \\
+		500 & 2.0 & \includegraphics[width=0.27\textwidth]{Q2_2_5_500_2.0.png} \\
 		\hline
-		500 & 10.0 & \includegraphics[width=0.27\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_2_5_500_10.0.png} \\						
+		500 & 10.0 & \includegraphics[width=0.27\textwidth]{Q2_2_5_500_10.0.png} \\						
 		\hline
-		5000 & 2.0 & \includegraphics[width=0.27\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_2_5_5000_2.0.png} \\
+		5000 & 2.0 & \includegraphics[width=0.27\textwidth]{Q2_2_5_5000_2.0.png} \\
 		\hline
-		500 & 1.0 & \includegraphics[width=0.27\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_2_5_500_1.0.png} \\			
+		500 & 1.0 & \includegraphics[width=0.27\textwidth]{Q2_2_5_500_1.0.png} \\			
 		\hline
-		500 & 0.001 & \includegraphics[width=0.27\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_2_5_500_0.001.png} \\
+		500 & 0.001 & \includegraphics[width=0.27\textwidth]{Q2_2_5_500_0.001.png} \\
 		\hline
-		5000 & 0.001 & \includegraphics[width=0.27\textwidth]{D:/CMU_16820_Work/CMU_16820_Advanced_Computer_Vision/hw1/Q2_2_5_5000_0.001.png} \\
+		5000 & 0.001 & \includegraphics[width=0.27\textwidth]{Q2_2_5_5000_0.001.png} \\
 		\hline
 	\end{tabular}
 	\caption{Parameter Changes and Corresponding Composite Images}
@@ -492,5 +482,148 @@
 	\newpage
 	\subsection*{Q3.1 at page 9}
 	Ans:\\
-	\hangindent=0.4em \hspace{0.3em} Table
+	\hangindent=0.4em \hspace{0.3em} Figure \ref{fig:Q331_left} - Figure \ref{fig:Q331_cnter} shows the results of composite video where the timestamps displaying overlays at left, right, and center of the video frame. The resulted video is here: \href{https://drive.google.com/file/d/1lg2Ez4O62NCa-MrrvyQUnXDzLBnftsAt/view?usp=sharing}{ar\@.avi}, and the code snippets are as the following Figure \ref{fig:Q331_cns1} - Figure \ref{fig:Q331_cns3}.
+	\begin{figure}[H]
+	\centering
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{./result/Q3_1_ar_result_overlay_left.jpg}  % Replace with your image file
+		\caption{Q3.1 Screenshot of Result at Left Timestamp}
+		\label{fig:Q331_left}
+	\end{minipage}
+	\hfill  % This adds space between the images
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{./result/Q3_1_ar_result_overlay_right.jpg}  % Replace with your image file
+		\caption{Q3.1 Screenshot of Result at Right Timestamp}
+		\label{fig:Q331_right}
+	\end{minipage}
+	\end{figure}	
+	
+	\begin{figure}[H]		
+	\centering
+	\includegraphics[width=0.45\textwidth]{./result/Q3_1_ar_result_overlay_cnter.jpg}  % Replace with your image file
+	\caption{Q3.1 Screenshot of Result at Center Timestamp}
+	\label{fig:Q331_cnter}
+	\end{figure}	
+	
+	\begin{figure}[H]
+	\centering
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{./Q3_1_ar_cns1.png}  % Replace with your image file
+		\caption{Q3.1 Code Snippet 1}
+		\label{fig:Q331_cns1}
+	\end{minipage}
+	\hfill  % This adds space between the images
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{./Q3_1_ar_cns2.png}  % Replace with your image file
+		\caption{Q3.1 Code Snippet 2}
+		\label{fig:Q331_cns2}
+	\end{minipage}
+	\end{figure}
+	\begin{figure}[H]		
+	\centering
+	\includegraphics[width=0.45\textwidth]{./Q3_1_ar_cns3.png}  % Replace with your image file
+	\caption{Q3.1 Code Snippet 3}
+	\label{fig:Q331_cns3}
+	\end{figure}		
+	
+	\newpage
+	\subsection*{Q3.2 at page 10}
+	Ans:\\
+	\hangindent=0.4em \hspace{0.3em} In order to accelerate the whole program to approach the real-time performance, I firstly need to know which part of the program takes long time to process. To get the 30 FPS result, each for loop to process a frame should use less than 1/30 seconds, nearly 0.03 seconds. Figure \ref{fig:Q32profiling} shows the code I added to do the profiling, and Figure \ref{fig:Q32profiling_result} shows the result. As we can see from the result, both the time used to compute BRIEF descriptor and the match of the BRIEF descriptors take longer than 0.03 seconds, that is, original BRIEF descriptor takes 7.23 seconds to complete, and BRIEF matching takes 0.341 seconds to complete. One can reproduce the profiling result by referring to the command specified in python/README.md. When it comes to improving the whole process, my first thought is to down-sample the input frame, and use the smaller images (frames) to calculate feature detection, description, and matching, and then calculate the corresponding homography and rescale it to the original scale. The benefit is obvious: calculation on lower resolution reduces the processing time greatly. Hence, I did the following three changes:
+	\begin{enumerate}
+	\item Include a down\_sample\_factor input argument to specify the factor of down-sampling. Down-sample each of the frames before calculating feature detection, descriptor, matching, and homography. After calculating the homography, rescale it back to the original scale.
+	\item Since I have the change of scaling, and the original implementation of FAST detector and BRIEF descriptor are not scale-invariant, I choose to replace them with Opencv built-in ORB detector and descriptor, which has both scale-invariance and rotation-invariance.
+	\item As I have changed to the ORB detector and descriptor, the matching method should also be changed. According to \href{https://stackoverflow.com/questions/10610966/difference-between-bfmatcher-and-flannbasedmatcher}{this discussion} and \href{https://docs.opencv.org/4.x/dc/dc3/tutorial_py_matcher.html}{OpenCV website}, I would choose FLANN based Matcher over BFMatcher.
+	\end{enumerate}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{./Q3_2_ar_ec_profiling_cns1.png}  % Replace with your image file
+		\caption{Q3.2 Profiling Code Snippet}
+		\label{fig:Q32profiling}
+	\end{figure}	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{./Q3_2_ar_ec_profiling_result.png}  % Replace with your image file
+		\caption{Q3.2 Profiling Result}
+		\label{fig:Q32profiling_result}
+	\end{figure}	
+	\hangindent=0.1em \hspace{0.1em}Figure \ref{fig:Q32_change1_cns1} shows the code snippet of change 1 occuring in ec/matchPics.py matchPics(), which I down-sample the two gray images before calculating the feature points. Figure \ref{fig:Q32_change1_cns2} shows the code snippet of change 1 occuring in ec/planarH.py computeH\_ransac(), which I scale back the calculated homography to the original scale by multiplying the down\_sample\_factor on the translation part of the homography, and leaves other parts unchanged as other parts do not change due to down-sampling.
+
+
+	\begin{figure}[H]
+	\centering
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{./Q3_2_ar_ec_change1_cns1.png}  % Replace with your image file
+		\caption{Q3.2 Change 1 Code Snippet 1}
+		\label{fig:Q32_change1_cns1}
+	\end{minipage}
+	\hfill  % This adds space between the images
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{./Q3_2_ar_ec_change1_cns2.png}  % Replace with your image file
+		\caption{Q3.2 Change 1 Code Snippet 2}
+		\label{fig:Q32_change1_cns2}
+	\end{minipage}
+	\end{figure}
+	\hangindent=0.1em \hspace{0.1em}Figure \ref{fig:Q32_change2_cns1} shows the change 2 occuring in ec/matchPics.py matchPics(), where I call the Opencv built-in ORB function to find the corresponding detectors and descriptors. 
+		
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{./Q3_2_ar_ec_change2_cns1.png}  % Replace with your image file
+		\caption{Q3.2 Change 2 Code Snippet}
+		\label{fig:Q32_change2_cns1}
+	\end{figure}
+	\hangindent=0.1em \hspace{0.1em}Figure \ref{fig:Q32_change3_cns1} shows the change 3 occuring in ec/matchPics.py matchPics(), where I call the Opencv built-in ORB matching function, called FLANN based Matcher, to find the corresponding matching feature points.
+	
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./Q3_2_ar_ec_change3_cns1.png}  % Replace with your image file
+	\caption{Q3.2 Change 3 Code Snippet}
+	\label{fig:Q32_change3_cns1}
+	\end{figure}
+	
+	\hangindent=0.1em \hspace{0.1em}Figure \ref{fig:Q32_ar_ec_cns1} - Figure \ref{fig:Q32_ar_ec_cns3} show the code snippet of the main function in ec/ar\_ec.py. One can refer to ec/README.md for the command to run the real-time AR application. The final FPS will be automatically reported on the standard output and the report willl be stored under the folder specified by --output\_file argument. The resulting video will also be stored in the same output folder. The final performance under my environment is nearly 31 FPS as shown in Figure \ref{fig:Q32_ar_ec_fs}, which is 242 times faster over the original implementation with 0.128 FPS shown in Figure \ref{fig:Q32profiling_result}.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{./Q3_2_ar_ec_final_speed.png}  % Replace with your image file
+		\caption{Q3.2 ar\_ec.py Final Speed}
+		\label{fig:Q32_ar_ec_fs}
+	\end{figure}	
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{./Q3_2_ar_ec_cns1.png}  % Replace with your image file
+		\caption{Q3.2 ar\_ec.py Code Snippet 1}
+		\label{fig:Q32_ar_ec_cns1}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\textwidth]{./Q3_2_ar_ec_cns2.png}  % Replace with your image file
+		\caption{Q3.2 ar\_ec.py Code Snippet 2}
+		\label{fig:Q32_ar_ec_cns2}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\textwidth]{./Q3_2_ar_ec_cns3.png}  % Replace with your image file
+		\caption{Q3.2 ar\_ec.py Code Snippet 3}
+		\label{fig:Q32_ar_ec_cns3}
+	\end{figure}
+	\hangindent=0.1em \hspace{0.1em}There is another input argument that I originally developed to further speedup, but I currently do not use. It is the --frame\_interval\_same. It is used to bypass some frames that can use the same homography as previous frame. The reason that one can do it is to assume that the targeted frames will not have large movement over 'frame\_interval\_same' frames. Under this assumption, the mapping of homography can be deemed as nearly unchanged. The default value of this argument is set to 2 as I think that data/book.mov does not have big motion between continuous frames. Although I can use it to further speedup my performance, which may be up to 50 FPS, I do not turn it on by setting this argument to 1 , like the one specified in ec/README.md, because I have already reached the performance over 30 FPS without the usage of this argument.
+
+	\newpage
+	\subsection*{Q4 at page 10}
+	Ans:\\
+	\hangindent=0.4em \hspace{0.3em} In
+
+
+
+
+
+	
 \end{document}
