@@ -26,8 +26,8 @@
        		\vspace{0.5cm}
         		{\large Patrick Chen \par}
         		\vspace{0.5cm}
-		{\large Collaborators: \par}
-		\vspace{0.5cm}
+		%{\large Collaborators: NA \par}
+		%\vspace{0.5cm}
         		{\large September 7, 2024 \par}
     	\end{center}
     	\vspace*{\fill} % Add space after the title block to center everything
@@ -358,9 +358,45 @@
 	\end{figure}
 	
 	\newpage
-	\subsection*{Q2.1.7 at page 6}
+	\subsection*{Q2.1.7.1 at page 6}
 	Ans:\\
-	\hangindent=0.4em \hspace{0.3em} //to-do
+	\hangindent=0.4em \hspace{0.3em} Figure shows the result of adding rotation-invariance to the BRIEF description. After detecting the FAST feature points, I open a patch of size 9x9 to calculate the gradient, using Sobel detector. By doing the statistics and calculate the histogram of gradient, I find the primal orientation of the patch, then in the BRIEF descriptor calculation, I pass the negative of the primal orientation to the rotate() function before the sampling and comparing process begin. It is to undo the rotation to the zero degrees and then calculate the feature descriptor. Accordingly it can reach rotation-invariant. Figure \ref{fig:Q2171_cns1} - Figure \ref{fig:Q2171_cns4} shows the code snippets. The command is : python ./briefRotTestQ217.py --sigma 0.08 --ratio 0.61 
+	\begin{figure}[H]		
+	\centering
+	\includegraphics[width=0.8\textwidth]{Q2_1_7_1_cns1.png}  % Replace with your image file name
+	\caption{Q2.1.7.1 Code Snippet 1}
+	\label{fig:Q2171_cns1}
+	\end{figure}
+	\begin{figure}[H]		
+	\centering
+	\includegraphics[width=0.8\textwidth]{Q2_1_7_1_cns2.png}  % Replace with your image file name
+	\caption{Q2.1.7.1 Code Snippet 2}
+	\label{fig:Q2171_cns2}
+	\end{figure}		
+	\begin{figure}[H]		
+	\centering
+	\includegraphics[width=0.8\textwidth]{Q2_1_7_1_cns3.png}  % Replace with your image file name
+	\caption{Q2.1.7.1 Code Snippet 3}
+	\label{fig:Q2171_cns3}
+	\end{figure}
+	\begin{figure}[H]		
+	\centering
+	\includegraphics[width=0.8\textwidth]{Q2_1_7_1_cns4.png}  % Replace with your image file name
+	\caption{Q2.1.7.1 Code Snippet 4}
+	\label{fig:Q2171_cns4}
+	\end{figure}
+	
+	\newpage
+	\subsection*{Q2.1.7.2 at page 7}
+	Ans:\\
+	\hangindent=0.4em \hspace{0.3em} Figure \ref{fig:Q2172_hsr} shows the result of matching a picture to the same picture at half the size. We can see that the BRIEF has limits on scale-invariance.
+	\begin{figure}[H]		
+		\centering
+		\includegraphics[width=0.8\textwidth]{Q4_2_1_7_2_match_result_half_size.png}  % Replace with your image file name
+		\caption{Q2.1.7.2 Half Size Matching Result}
+		\label{fig:Q2172_hsr}
+	\end{figure}		
+	
 	
 	\newpage
 	\subsection*{Q2.2.1 at page 7}
@@ -668,6 +704,22 @@
 		\caption{Q4. Code Snippet 3}
 		\label{fig:Q4_cns3}
 	\end{figure}
+	
+	\newpage
+	\subsection*{Collaborations}
+	Ans:\\
+	\hangindent=0.4em \hspace{0.3em} Though I do not have collaborators, I found the following websites helpful on understanding the concepts in this homework.
+	\begin{enumerate}
+		\item \url{https://stackoverflow.com/questions/10610966/difference-between-bfmatcher-and-flannbasedmatcher}
+		\item \url{https://docs.opencv.org/4.x/dc/dc3/tutorial_py_matcher.html}
+		\item \url{https://medium.com/@deepanshut041/introduction-to-fast-features-from-accelerated-segment-test-4ed33dde6d65}
+		\item \url{https://docs.opencv.org/3.4/dc/d7d/tutorial_py_brief.html}
+		\item \url{https://docs.opencv.org/4.x/d1/d89/tutorial_py_orb.html}
+		\item \url{https://docs.opencv.org/4.x/d9/dab/tutorial_homography.html}
+		\item \url{https://docs.opencv.org/4.x/d1/de0/tutorial_py_feature_homography.html}
+		\item \url{https://numpy.org/doc/stable/reference/generated/numpy.linalg.eig.html}
+	\end{enumerate}
+	
 
 	
 \end{document}

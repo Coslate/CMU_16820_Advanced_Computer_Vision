@@ -3,6 +3,7 @@ import cv2
 import scipy.io as sio
 from matplotlib import pyplot as plt
 import skimage.feature
+from scipy.ndimage import rotate
 
 PATCHWIDTH = 9
 
@@ -39,7 +40,7 @@ def makeTestPattern(patchWidth, nbits):
 
 
 
-def computePixel(img, idx1, idx2, width, center):
+def computePixel(img, idx1, idx2, width, center, index, length):
 
     halfWidth = width // 2
     col1 = idx1 % width - halfWidth
@@ -47,6 +48,25 @@ def computePixel(img, idx1, idx2, width, center):
     col2 = idx2 % width - halfWidth
     row2 = idx2 // width - halfWidth
     return 1 if img[int(center[0]+row1)][int(center[1]+col1)] < img[int(center[0]+row2)][int(center[1]+col2)] else 0
+
+
+def computePixelRotInv(img, idx1, idx2, width, center, orientation, index, length):
+    #rotated_image = rotate(img, angle=-1*orientation, reshape=True)
+    #orientation_rad = -orientation*np.pi/180
+
+    halfWidth = width // 2
+    col1 = idx1 % width - halfWidth
+    row1 = idx1 // width - halfWidth
+    col2 = idx2 % width - halfWidth
+    row2 = idx2 // width - halfWidth
+    y = center[0]
+    x = center[1]
+    patch = img[max(0, y-halfWidth):min(img.shape[0], y+halfWidth+1),
+                max(0, x-halfWidth):min(img.shape[1], x+halfWidth+1)]    
+
+    rotated_patch = rotate(patch, angle=-1*orientation, reshape=True)
+#   return 1 if img[row1_idx][col1_idx)] < img[row2_idx][col2_idx] else 0
+    return 1 if rotated_patch[int(row1)][int(col1)] < rotated_patch[int(row2)][int(col2)] else 0
 
 
 def computeBrief(img, locs):
@@ -59,10 +79,36 @@ def computeBrief(img, locs):
     halfWidth = patchWidth//2
 
     locs = np.array(list(filter(lambda x: halfWidth <= x[0] < m-halfWidth and halfWidth <= x[1] < n-halfWidth, locs)))
-    desc = np.array([list(map(lambda x: computePixel(img, x[0], x[1], patchWidth, c), zip(compareX, compareY))) for c in locs])
+    desc = np.array([list(map(lambda x: computePixel(img, x[0], x[1], patchWidth, c, index, len(locs)), zip(compareX, compareY))) for index, c in enumerate(locs)])
 
     return desc, locs
 
+def computeBriefRotInv(img, locs, orientation):
+
+    patchWidth = 9
+    nbits = 256
+
+    compareX, compareY = makeTestPattern(patchWidth,nbits)
+    m, n = img.shape
+
+    halfWidth = patchWidth//2
+
+    locs = np.array(list(filter(lambda x: halfWidth <= x[0] < m-halfWidth and halfWidth <= x[1] < n-halfWidth, locs)))
+    desc = np.array([list(map(lambda x: computePixelRotInv(img, x[0], x[1], patchWidth, c, orientation[index], index, len(locs)), zip(compareX, compareY))) for index, c in enumerate(locs)])
+
+    return desc, locs
+
+
+def corner_detectionRotInv(img, sigma):
+
+    # fast method
+    result_img = skimage.feature.corner_fast(img, n=PATCHWIDTH, threshold=sigma)
+    locs = skimage.feature.corner_peaks(result_img, min_distance=1)
+    corner_values = result_img[locs[:, 0],  locs[:, 1]]
+    sorted_indices = np.argsort(corner_values)[::-1]  # Sort in descending order
+    best_500_corners = locs[sorted_indices[:500]]  # Get the top 500 corners
+
+    return best_500_corners
 
 
 def corner_detection(img, sigma):
