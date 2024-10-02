@@ -7,7 +7,7 @@ from InverseCompositionAffine import InverseCompositionAffine
 import cv2
 from scipy.ndimage import median_filter
 
-def SubtractDominantMotion(image1, image2, threshold, num_iters, tolerance):
+def SubtractDominantMotion(image1, image2, threshold, num_iters, tolerance, use_inverse):
     """
     :param image1: Images at time t
     :param image2: Images at time t+1
@@ -22,7 +22,12 @@ def SubtractDominantMotion(image1, image2, threshold, num_iters, tolerance):
 
     ################### TODO Implement Substract Dominent Motion ###################
     # Calculate the transformation matrix M
-    M = LucasKanadeAffine(image1, image2, threshold, num_iters)
+    if use_inverse:
+        print(f"> Use InverseCompositionAffine()...")
+        M = InverseCompositionAffine(image1, image2, threshold, num_iters)
+    else:
+        print(f"> Use LucasKanadeAffine()...")
+        M = LucasKanadeAffine(image1, image2, threshold, num_iters)
 
     # Warping It
     height, width = image1.shape

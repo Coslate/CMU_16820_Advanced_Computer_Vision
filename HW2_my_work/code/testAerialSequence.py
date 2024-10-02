@@ -47,12 +47,20 @@ def main():
         help='output folder for aerialseq_frame*.png',
     )
 
+    parser.add_argument(
+        '--use_inverse',
+        type=int,
+        default=0,
+        help='whether to use inverse_compositional Lucas Kanade algorithm. Set 0 to use original forwarding Lucas Kanade algorithm.',
+    )
+
     args = parser.parse_args()
     num_iters = args.num_iters
     threshold = args.threshold
     tolerance = args.tolerance
     seq_file_path = args.seq
     output_folder = args.output_folder
+    use_inverse = args.use_inverse
     seq = np.load(seq_file_path)
 
     for i in [30, 60, 90, 120]:
@@ -62,7 +70,7 @@ def main():
         # Motion Detection
         It  = seq[:, :, i]
         It1 = seq[:, :, i+1]
-        mask = SubtractDominantMotion(It, It1, threshold, num_iters, tolerance)
+        mask = SubtractDominantMotion(It, It1, threshold, num_iters, tolerance, use_inverse)
 
         # Visualize the results
         binary_mask = (mask.copy().astype(np.uint8))*255
