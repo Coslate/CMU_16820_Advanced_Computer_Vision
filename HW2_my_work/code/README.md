@@ -30,7 +30,11 @@ For Q2.3 & Q3.1 Please first go to code/ folder and use the following command li
 --use_inverse 0: use LucasKanadeAffine()
 --use_inverse 1: use InverseCompositionAffine()
 
-> python ./testAerialSequence.py --threshold 1e-11 --tolerance 0.064 --use_inverse 0 --output_folder ../result_aerialseq_th1e-11_tol0.064
-> python ./testAerialSequence.py --threshold 1e-11 --tolerance 0.064 --use_inverse 1 --output_folder ../result_aerialseq_inverse_th1e-11_tol0.064
-> python ./testAntSequence.py --threshold 1e-11 --tolerance 0.025 --use_inverse 0 --output_folder ../result_antseq_th1e-11_tol0.025
-> python ./testAntSequence.py --threshold 1e-11 --tolerance 0.025 --use_inverse 1 --output_folder ../result_antseq_inverse_th1e-11_tol0.025
+> python ./testAerialSequence.py --threshold 1e-11 --tolerance 0.064 --use_inverse 0 --output_folder 
+../result_aerialseq_th1e-11_tol0.064
+> python ./testAerialSequence.py --threshold 1e-11 --tolerance 0.064 --use_inverse 1 --output_folder 
+../result_aerialseq_inverse_th1e-11_tol0.064
+> python ./testAntSequence.py --threshold 1e-11 --tolerance 0.025 --use_inverse 0 --output_folder 
+../result_antseq_th1e-11_tol0.025
+> python ./testAntSequence.py --threshold 1e-11 --tolerance 0.025 --use_inverse 1 --output_folder 
+../result_antseq_inverse_th1e-11_tol0.025
