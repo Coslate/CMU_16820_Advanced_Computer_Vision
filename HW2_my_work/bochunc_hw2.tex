@@ -1,0 +1,421 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym,amsfonts,amssymb,amsthm,amsmath}
+\usepackage[a4paper,margin=1in]{geometry} % Adjust margins as needed
+\usepackage{float}
+\usepackage{hyperref}
+
+
+\setlength{\parindent}{0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{8.8in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{18pt}
+
+
+
+
+\begin{document}
+
+	\begin{titlepage}
+    	\vspace*{\fill} % Add space before the title block
+    	\begin{center}
+        	{\huge \textbf{CMU Fall24 16820 Homework 2} \par}
+       		\vspace{0.5cm}
+        		{\large Patrick Chen \par}
+        		\vspace{0.5cm}
+		%{\large Collaborators: NA \par}
+		%\vspace{0.5cm}
+        		{\large September 21, 2024 \par}
+    	\end{center}
+    	\vspace*{\fill} % Add space after the title block to center everything
+	\end{titlepage}
+	
+	\newpage
+	\subsection*{Q1.1 at page 2}
+	Ans:\\
+	\hangindent=1.5em \hspace{1.5em} 1. It is the partial derivative of warping of x with respect to the parameters, which is : \newline $\frac{\partial W(x; p)}{\partial \mathbf{p}^T} = \frac{\partial \begin{bmatrix} x+p_x \\ y+p_y \end{bmatrix}}{\partial p^T}$ with $\mathbf{p} = \begin{bmatrix} p_x \\ p_y \end{bmatrix}$
+	 \newline
+	 $\rightarrow$ $\frac{\partial W(x; p)}{\partial \mathbf{p}^T}$ = $\begin{bmatrix} 1 & 0   \\ 0 & 1 \end{bmatrix}$
+	\newline
+	\newline
+	\newline
+	\hangindent=1.5em \hspace{1.5em} 2.	A and b according to equation (5) are as the following:
+	\newline 
+		A = $\sum_{x \in \mathbb{N}}$$\nabla I \frac{\partial W(x; p)}{\partial \mathbf{p}^T}$, where $\nabla I = \frac{\partial \mathcal{I}_{t+1}(x')}{\partial \mathbf{x'}^T}$, and x' = W(x; p)
+	\newline
+		= 
+	$
+	\begin{bmatrix}
+		\frac{\partial I_{t+1}(x_1')}{\partial x'} & \frac{\partial I_{t+1}(x_1')}{\partial y'} \\
+		\frac{\partial I_{t+1}(x_2')}{\partial x'} & \frac{\partial I_{t+1}(x_2')}{\partial y'} \\
+		\vdots & \vdots \\
+		\frac{\partial I_{t+1}(x_D')}{\partial x'} & \frac{\partial I_{t+1}(x_D')}{\partial y'}
+	\end{bmatrix}$
+	\newline
+		b = $\mathcal{I}_t(\mathbf{x}) - \mathcal{I}_{t+1}(\mathbf{x'})$, where x' = W(x; p)
+	\newline
+		=
+	$
+	\begin{bmatrix}
+		I_t(x_1) - I_{t+1}(x_1 + \mathbf{p}) \\
+		I_t(x_2) - I_{t+1}(x_2 + \mathbf{p}) \\
+		\vdots \\
+		I_t(x_D) - I_{t+1}(x_D + \mathbf{p})
+	\end{bmatrix}$
+	\newline
+	\newline
+	\newline
+	\hangindent=1.5em \hspace{1.5em} 3. ${A}^TA$ must be invertible, in other words, must be full rank, that is, the matrix A must be full rank.
+	
+	\newpage
+	\subsection*{Q1.2 at page 2}
+	Ans:\\
+	\hangindent=1.5em \hspace{1.5em} The code is implemented in the file LucasKanade.py, and the results are shown in Q1.3 and Q1.4 in the following pages.
+	
+	\newpage
+	\subsection*{Q1.3 at page 2}
+	Ans:\\
+	\hangindent=1.5em \hspace{1.5em} The tracking results of carseqrects.npy at frames 1, 100, 200, 300, and 400 are shown in Figure \ref{fig:car_th1e-4} and Figure \ref{fig:car_th1e-5} below with --threshold setting to 1e-4 and 1e-5 respectively. The command line to regenerate the following results can be found in README chapter at the end of this writeup.
+	
+	\begin{figure}[H]		
+	\centering
+	\includegraphics[width=\textwidth]{code/result/result_carsecq_th1e-4/q1_3_car_collage.png}  % Replace with your image file
+	\caption{Car Seq Tracking Results Frames 1, 100, 200, 300, 400 (left to right) w/ --threshold=1e-4}
+	\label{fig:car_th1e-4}
+	\end{figure}
+	
+	\begin{figure}[H]		
+	\centering
+	\includegraphics[width=\textwidth]{code/result/result_carsecq_th1e-5/q1_3_car_collage.png}  % Replace with your image file
+	\caption{Car Seq Tracking Results Frames 1, 100, 200, 300, 400 (left to right) w/ --threshold=1e-5}
+	\label{fig:car_th1e-5}
+	\end{figure}
+	
+	 The tracking results of girleqrects.npy at frames 1, 20, 30, 60 and 80 are shown in Figure \ref{fig:girl_th1e-4} and Figure \ref{fig:girl_th1e-5} below with --threshold setting to 1e-4 and 1e-5 respectively. The command line to regenerate the following results can be found in README chapter at the end of this writeup.
+	 
+	\begin{figure}[H]		
+	\centering
+	\includegraphics[width=\textwidth]{code/result/result_girlsecq_th1e-4/q1_3_girl_collage.png}  % Replace with your image file
+	\caption{Girl Seq Tracking Results Frames 1, 20, 30, 60, 80 (left to right) w/ --threshold=1e-4}
+	\label{fig:girl_th1e-4}
+	\end{figure}
+
+	\begin{figure}[H]		
+	\centering
+	\includegraphics[width=\textwidth]{code/result/result_girlsecq_th1e-5/q1_3_girl_collage.png}  % Replace with your image file
+	\caption{Girl Seq Tracking Results Frames 1, 20, 30, 60, 80 (left to right) w/ --threshold=1e-5}
+	\label{fig:girl_th1e-5}
+	\end{figure}
+	
+	As I decrease the --threshold parameter, the tracking performance would improve as the red rectangles would capture the target more closely. It is particularly obvious on carseqrects.npy
+	
+	\newpage
+	\subsection*{Q1.4 at page 3}
+	Ans:\\
+	\hangindent=1.5em \hspace{1.5em} The tracking results of carseqrects.npy at frames 1, 100, 200, 300, and 400 are shown in the following Figure \ref{fig:car_th1e-4_tth1} - Figure \ref{fig:car_th1e-5_tth10} below with --threshold setting to $1e-4$ and $1e-5$ respectively, and --template$\_$threshold setting to 1, 5, and 10 respectively. The blue rectangles are the results without drifting correction (Q1.3), and the red squares are the results with drifting correction (Q1.4). The command line to regenerate the following results can be found in README chapter at the end of this writeup.
+	
+	\begin{figure}[H]		
+	\centering
+	\includegraphics[width=\textwidth]{code/result/result_carsecq_wcrt_th1e-4_tth_1/q1_4_car_collage.png}  % Replace with your image file
+	\caption{Car Seq Tracking Results Frames 1, 100, 200, 300, 400 (left to right) w/ --threshold=1e-4 --template$\_$threshold=1}
+	\label{fig:car_th1e-4_tth1}
+	\end{figure}
+	\begin{figure}[H]		
+	\centering
+	\includegraphics[width=\textwidth]{code/result/result_carsecq_wcrt_th1e-4_tth_5/q1_4_car_collage.png}  % Replace with your image file
+	\caption{Car Seq Tracking Results Frames 1, 100, 200, 300, 400 (left to right) w/ --threshold=1e-4 --template$\_$threshold=5}
+	\label{fig:car_th1e-4_tth5}
+	\end{figure}
+	\begin{figure}[H]		
+	\centering
+	\includegraphics[width=\textwidth]{code/result/result_carsecq_wcrt_th1e-4_tth_10/q1_4_car_collage.png}  % Replace with your image file
+	\caption{Car Seq Tracking Results Frames 1, 100, 200, 300, 400 (left to right) w/ --threshold=1e-4 --template$\_$threshold=10}
+	\label{fig:car_th1e-4_tth10}
+	\end{figure}
+	\begin{figure}[H]		
+	\centering
+	\includegraphics[width=\textwidth]{code/result/result_carsecq_wcrt_th1e-5_tth_1/q1_4_car_collage.png}  % Replace with your image file
+	\caption{Car Seq Tracking Results Frames 1, 100, 200, 300, 400 (left to right) w/ --threshold=1e-5 --template$\_$threshold=1}
+	\label{fig:car_th1e-5_tth1}
+	\end{figure}
+	\begin{figure}[H]		
+	\centering
+	\includegraphics[width=\textwidth]{code/result/result_carsecq_wcrt_th1e-5_tth_5/q1_4_car_collage.png}  % Replace with your image file
+	\caption{Car Seq Tracking Results Frames 1, 100, 200, 300, 400 (left to right) w/ --threshold=1e-5 --template$\_$threshold=5}
+	\label{fig:car_th1e-5_tth5}
+	\end{figure}
+	\begin{figure}[H]		
+	\centering
+	\includegraphics[width=\textwidth]{code/result/result_carsecq_wcrt_th1e-5_tth_10/q1_4_car_collage.png}  % Replace with your image file
+	\caption{Car Seq Tracking Results Frames 1, 100, 200, 300, 400 (left to right) w/ --threshold=1e-5 --template$\_$threshold=10}
+	\label{fig:car_th1e-5_tth10}
+	\end{figure}
+	
+	The tracking results of girlseqrects.npy at frames 1, 20, 40, 60 and 80 are shown in the following Figure \ref{fig:girl_th1e-4_tth1} - Figure \ref{fig:girl_th1e-5_tth10} below with --threshold setting to $1e-4$ and $1e-5$ respectively, and --template$\_$threshold setting to 1, 5, and 10 respectively. The blue rectangles are the results without drifting correction (Q1.3), and the red squares are the results with drifting correction (Q1.4). The command line to regenerate the following results can be found in README chapter at the end of this writeup.
+
+	\begin{figure}[H]		
+	\centering
+	\includegraphics[width=\textwidth]{code/result/result_girlsecq_wcrt_th1e-4_tth_1/q1_4_girl_collage.png}  % Replace with your image file
+	\caption{Car Seq Tracking Results Frames 1, 20, 40, 60, 80 (left to right) w/ --threshold=1e-4 --template$\_$threshold=1}
+	\label{fig:girl_th1e-4_tth1}
+	\end{figure}
+	\begin{figure}[H]		
+	\centering
+	\includegraphics[width=\textwidth]{code/result/result_girlsecq_wcrt_th1e-4_tth_5/q1_4_girl_collage.png}  % Replace with your image file
+	\caption{Girl Seq Tracking Results Frames 1, 20, 40, 60, 80 (left to right) w/ --threshold=1e-4 --template$\_$threshold=5}
+	\label{fig:girl_th1e-4_tth5}
+	\end{figure}
+	\begin{figure}[H]		
+	\centering
+	\includegraphics[width=\textwidth]{code/result/result_girlsecq_wcrt_th1e-4_tth_10/q1_4_girl_collage.png}  % Replace with your image file
+	\caption{Girl Seq Tracking Results Frames 1, 20, 40, 60, 80 (left to right) w/ --threshold=1e-4 --template$\_$threshold=10}
+	\label{fig:girl_th1e-4_tth10}
+	\end{figure}
+	\begin{figure}[H]		
+	\centering
+	\includegraphics[width=\textwidth]{code/result/result_girlsecq_wcrt_th1e-5_tth_1/q1_4_girl_collage.png}  % Replace with your image file
+	\caption{Girl Seq Tracking Results Frames 1, 20, 40, 60, 80 (left to right) w/ --threshold=1e-5 --template$\_$threshold=1}
+	\label{fig:girl_th1e-5_tth1}
+	\end{figure}
+	\begin{figure}[H]		
+	\centering
+	\includegraphics[width=\textwidth]{code/result/result_girlsecq_wcrt_th1e-5_tth_5/q1_4_girl_collage.png}  % Replace with your image file
+	\caption{Girl Seq Tracking Results Frames 1, 20, 40, 60, 80 (left to right) w/ --threshold=1e-5 --template$\_$threshold=5}
+	\label{fig:girl_th1e-5_tth5}
+	\end{figure}
+	\begin{figure}[H]		
+	\centering
+	\includegraphics[width=\textwidth]{code/result/result_girlsecq_wcrt_th1e-5_tth_10/q1_4_girl_collage.png}  % Replace with your image file
+	\caption{Girl Seq Tracking Results Frames 1, 20, 40, 60, 80 (left to right) w/ --threshold=1e-5 --template$\_$threshold=10}
+	\label{fig:girl_th1e-5_tth10}
+	\end{figure}
+	
+	As I decrease the --threshold parameter, the tracking performance would improve as the red rectangles would capture the target more closely. On the other hand, when I decrease or increase the --template$\_$threshold, there is no big difference on the tracking results.
+	
+	 
+
+	\newpage
+	\subsection*{Q2.1 at page 4}
+	Ans:\\
+	\hangindent=1.5em \hspace{1.5em} The code is implemented in the file LucasKanadeAffine.py, and the results are shown in Q2.3 in the following pages.	
+	\newpage
+	
+	\subsection*{Q2.2 at page 4}
+	Ans:\\
+	\hangindent=1.5em \hspace{1.5em} The code is implemented in the file SubstractDominantMotion.py, and the results are shown in Q2.3 in the following pages.		
+	
+	
+	\newpage
+	\subsection*{Q2.3 at page 5}
+	Ans:\\
+	\hangindent=1.5em \hspace{1.5em} Following are the results of aerialseq.npy on frames 30, 60, 90, and 120. The command line to regenerate the following results can be found in README chapter at the end of this writeup. The parameter --threshold is set to 1e-11, and the parameter --tolerance is set to 0.064.
+	
+	\begin{figure}[H]
+	\centering
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{result_aerialseq_th1e-11_tol0.064/aerialseq_frame30.png}  % Replace with your image file
+		\caption{Aerial Sequence Frame 30 LucasKanadeAffine() Result}
+		\label{fig:Q2_3_Aerial_frame_30_result}
+	\end{minipage}
+	\hfill  % This adds space between the images
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{result_aerialseq_th1e-11_tol0.064/aerialseq_frame60.png}  % Replace with your image file
+		\caption{Aerial Sequence Frame 60 LucasKanadeAffine() Result}
+		\label{fig:Q2_3_Aerial_frame_60_result}
+	\end{minipage}	
+	\end{figure}
+	\begin{figure}[H]
+	\centering
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{result_aerialseq_th1e-11_tol0.064/aerialseq_frame90.png}  % Replace with your image file
+		\caption{Aerial Sequence Frame 90 LucasKanadeAffine() Result}
+		\label{fig:Q2_3_Aerial_frame_90_result}
+	\end{minipage}
+	\hfill  % This adds space between the images
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{result_aerialseq_th1e-11_tol0.064/aerialseq_frame120.png}  % Replace with your image file
+		\caption{Aerial Sequence Frame 120 LucasKanadeAffine() Result}
+		\label{fig:Q2_3_Aerial_frame_120_result}
+	\end{minipage}	
+	\end{figure}	
+	
+	\hangindent=1.5em \hspace{1.5em} Following are the results of antseq.npy on frames 30, 60, 90, and 120. The command line to regenerate the following results can be found in README chapter at the end of this writeup. The parameter --threshold is set to 1e-11, and the parameter --tolerance is set to 0.025.
+	
+	\begin{figure}[H]
+	\centering
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{result_antseq_th1e-11_tol0.025/antseq_frame30.png}  % Replace with your image file
+		\caption{Ant Sequence Frame 30 LucasKanadeAffine() Result}
+		\label{fig:Q2_3_Ant_frame_30_result}
+	\end{minipage}
+	\hfill  % This adds space between the images
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{result_antseq_th1e-11_tol0.025/antseq_frame60.png}  % Replace with your image file
+		\caption{Ant Sequence Frame 60 LucasKanadeAffine() Result}
+		\label{fig:Q2_3_Ant_frame_60_result}
+	\end{minipage}	
+	\end{figure}
+	\begin{figure}[H]
+	\centering
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{result_antseq_th1e-11_tol0.025/antseq_frame90.png}  % Replace with your image file
+		\caption{Ant Sequence Frame 90 LucasKanadeAffine() Result}
+		\label{fig:Q2_3_Ant_frame_90_result}
+	\end{minipage}
+	\hfill  % This adds space between the images
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{result_antseq_th1e-11_tol0.025/antseq_frame120.png}  % Replace with your image file
+		\caption{Ant Sequence Frame 120 LucasKanadeAffine() Result}
+		\label{fig:Q2_3_Ant_frame_120_result}
+	\end{minipage}	
+	\end{figure}	
+	
+
+	\newpage
+	\subsection*{Q3.1 at page 5}
+	Ans:\\
+	\hangindent=1.5em \hspace{1.5em} Following are the results of aerialseq.npy after applying InverseCompositionAffine() on frames 30, 60, 90, and 120. The command line to regenerate the following results can be found in README chapter at the end of this writeup. The parameter --threshold is set to 1e-11, and the parameter --tolerance is set to 0.064.
+	
+	\begin{figure}[H]
+	\centering
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{result_aerialseq_inverse_th1e-11_tol0.064/aerialseq_frame30.png}  % Replace with your image file
+		\caption{Aerial Sequence Frame 30 InverseCompositionAffine() Result}
+		\label{fig:Q3_1_frame_30_result}
+	\end{minipage}
+	\hfill  % This adds space between the images
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{result_aerialseq_inverse_th1e-11_tol0.064/aerialseq_frame60.png}  % Replace with your image file
+		\caption{Aerial Sequence Frame 60 InverseCompositionAffine() Result}
+		\label{fig:Q3_1_frame_60_result}
+	\end{minipage}	
+	\end{figure}
+	\begin{figure}[H]
+	\centering
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{result_aerialseq_inverse_th1e-11_tol0.064/aerialseq_frame90.png}  % Replace with your image file
+		\caption{Aerial Sequence Frame 90 InverseCompositionAffine() Result}
+		\label{fig:Q3_1_frame_90_result}
+	\end{minipage}
+	\hfill  % This adds space between the images
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{result_aerialseq_inverse_th1e-11_tol0.064/aerialseq_frame120.png}  % Replace with your image file
+		\caption{Aerial Sequence Frame 120 InverseCompositionAffine() Result}
+		\label{fig:Q3_1_frame_120_result}
+	\end{minipage}	
+	\end{figure}	
+	
+	 Following are the results of antseq.npy after applying InverseCompositionAffine() on frames 30, 60, 90, and 120. The command line to regenerate the following results can be found in README chapter at the end of this writeupe. The parameter --threshold is set to 1e-11, and the parameter --tolerance is set to 0.025.
+	\begin{figure}[H]
+	\centering
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{result_antseq_inverse_th1e-11_tol0.025/antseq_frame30.png}  % Replace with your image file
+		\caption{Ant Sequence Frame 30 InverseCompositionAffine() Result}
+		\label{fig:Q3_1_frame_30_result}
+	\end{minipage}
+	\hfill  % This adds space between the images
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{result_antseq_inverse_th1e-11_tol0.025/antseq_frame60.png}  % Replace with your image file
+		\caption{Ant Sequence Frame 60 InverseCompositionAffine() Result}
+		\label{fig:Q3_1_frame_60_result}
+	\end{minipage}	
+	\end{figure}
+	\begin{figure}[H]
+	\centering
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{result_antseq_inverse_th1e-11_tol0.025/antseq_frame90.png}  % Replace with your image file
+		\caption{Ant Sequence Frame 90 InverseCompositionAffine() Result}
+		\label{fig:Q3_1_frame_90_result}
+	\end{minipage}
+	\hfill  % This adds space between the images
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{result_antseq_inverse_th1e-11_tol0.025/antseq_frame120.png}  % Replace with your image file
+		\caption{Ant Sequence Frame 120 InverseCompositionAffine() Result}
+		\label{fig:Q3_1_frame_120_result}
+	\end{minipage}	
+	\end{figure}
+	
+	\newpage
+	\subsection*{Q3.2 at page 5}
+	Ans:\\
+	\hangindent=1.5em \hspace{1.5em} The reason that inverse compositional approach is more computationally efficient than the classical approach is that it takes the calculation of Hession Matrix, Hession Matrix Inverse, Jacobian Matrix, and steepest descent images $\nabla T \frac{\partial \mathbf{W}}{\partial \mathbf{p}}$ out of the $\Delta p$ iteration loop and the values now can be pre-computed. Besides, the images on which the gradient is calculated on is changed from the warped version of It1 to the non-warped version of It (template). These are the reasons that inverse compositional is much more efficient than the classic version.
+	
+	\newpage
+	\subsection*{Collaborations}
+	Ans:\\
+	\hangindent=0.4em \hspace{0.3em} Though I do not have collaborators, I found the following websites helpful on understanding the concepts in this homework.
+	\begin{enumerate}
+		\item \url{https://www.ri.cmu.edu/pub_files/pub3/baker_simon_2003_3/baker_simon_2003_3.pdf.}
+		\item \url{http://16385.courses.cs.cmu.edu/spring2024/lecture/track}
+		\item \url{https://stats.stackexchange.com/questions/559575/how-does-addition-of-a-regularization-term-ensures-that-the-matrix-is-nonsingula}
+		\item \url{https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html}
+		\item \url{https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imsave.html}
+		\item \url{https://docs.opencv.org/4.x/d4/d61/tutorial_warp_affine.html}		
+	\end{enumerate}
+	
+	\newpage
+	\subsection*{README}
+	For Q1.3 Please use the following command line to reproduce the result stored in current folder
+	My resulted figures in the writeup report is generated by first running the following commands and copy each of the generated carseqrects.npy or girlseqrects.npy to the same folder with plotRects.py, and then run 'python plotRects.py q1.3 car' and 'python plotRects.py q1.3 girl' and get the generated q1\_3\_car\_collage.png and q1\_3\_girl\_collage.png
+	\begin{verbatim}
+	python ./testCarSequence.py --threshold 1e-4
+	python ./testCarSequence.py --threshold 1e-5
+	python ./testGirlSequence.py --threshold 1e-4
+	python ./testGirlSequence.py --threshold 1e-5
+	\end{verbatim}
+
+	For Q1.4 Please use the following command line to reproduce the result stored in current folder
+	My resulted figures in the writeup report is generated by first running the following commands and copy each of the generated carseqrects-wcrt.npy or 	girlseqrects-wcrt.npy to the same folder with plotRects.py, and then run 'python plotRects.py q1.4 car' and 'python plotRects.py q1.4 girl' and get the generated q1\_4\_car\_collage.png and q1\_4\_girl\_collage.png
+	\begin{verbatim}
+	python ./testCarSequenceWithTemplateCorrection.py --threshold 1e-4 --template_threshold 1
+	python ./testCarSequenceWithTemplateCorrection.py --threshold 1e-4 --template_threshold 5
+	python ./testCarSequenceWithTemplateCorrection.py --threshold 1e-4 --template_threshold 10
+	python ./testCarSequenceWithTemplateCorrection.py --threshold 1e-5 --template_threshold 1
+	python ./testCarSequenceWithTemplateCorrection.py --threshold 1e-5 --template_threshold 5
+	python ./testCarSequenceWithTemplateCorrection.py --threshold 1e-5 --template_threshold 10
+
+	python ./testGirlSequenceWithTemplateCorrection.py --threshold 1e-4 --template_threshold 1
+	python ./testGirlSequenceWithTemplateCorrection.py --threshold 1e-4 --template_threshold 5
+	python ./testGirlSequenceWithTemplateCorrection.py --threshold 1e-4 --template_threshold 10
+	python ./testGirlSequenceWithTemplateCorrection.py --threshold 1e-5 --template_threshold 1
+	python ./testGirlSequenceWithTemplateCorrection.py --threshold 1e-5 --template_threshold 5
+	python ./testGirlSequenceWithTemplateCorrection.py --threshold 1e-5 --template_threshold 10
+	\end{verbatim}
+
+	For Q2.3 and Q3.1 Please use the following command line to reproduce the result stored in the folder specified by --output folder argument. (Please mkdir the output folder first.)
+	\begin{verbatim}
+	--use_inverse 0: use LucasKanadeAffine()
+	--use_inverse 1: use InverseCompositionAffine()
+
+	python ./testAerialSequence.py --threshold 1e-11 --tolerance 0.064 --use_inverse 0 --output_folder 
+	../result_aerialseq_th1e-11_tol0.064
+	python ./testAerialSequence.py --threshold 1e-11 --tolerance 0.064 --use_inverse 1 --output_folder 
+	../result_aerialseq_inverse_th1e-11_tol0.064
+	python ./testAntSequence.py --threshold 1e-11 --tolerance 0.025 --use_inverse 0 --output_folder 
+	../result_antseq_th1e-11_tol0.025
+	python ./testAntSequence.py --threshold 1e-11 --tolerance 0.025 --use_inverse 1 --output_folder 
+	../result_antseq_inverse_th1e-11_tol0.025
+	\end{verbatim}
+	
+
+	
+\end{document}
