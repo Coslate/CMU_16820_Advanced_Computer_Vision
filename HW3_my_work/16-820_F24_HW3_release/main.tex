@@ -1,0 +1,260 @@
+\documentclass[11pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Packages                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{amsmath, amsfonts}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{titling}
+\usepackage{xfrac}
+\usepackage{fancyhdr}
+\usepackage{natbib}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{paralist}
+\usepackage{epstopdf}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{fancyvrb}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage[noend]{algpseudocode}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{times}
+\usepackage{url}
+\usepackage{comment}
+\usepackage{environ}
+\usepackage{textcomp}
+\usepackage{caption}
+\usepackage[colorlinks=true, urlcolor=purple]{hyperref}
+\usepackage{cleveref}
+\usepackage{parskip} % For NIPS style paragraphs.
+\usepackage[compact]{titlesec} % Less whitespace around titles
+\usepackage[inline]{enumitem} % For inline enumerate* and itemize*
+\usepackage{datetime}
+\usepackage{lastpage}
+\usepackage[final]{listings}
+\usepackage{tikz}
+\usetikzlibrary{shapes,decorations}
+\usepackage{framed}
+\usepackage{booktabs}
+\usepackage{cprotect}
+\usepackage{verbatimbox}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{mathtools} % For drcases
+\usepackage{cancel}
+\usepackage[many]{tcolorbox}
+\usepackage{sectsty}
+\usepackage{bm}
+\usepackage{nicefrac}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom commands are defined within the  %
+% common.tex file                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{common.tex}
+\include{definitions}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commands for customizing the assignment %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \newcommand{\deva}[1]{{\leavevmode\color{red}[Deva: #1]}}
+% \newcommand{\todo}[1]{{\leavevmode\color{red}[TODO: #1]}}
+\newcommand{\deliver}[1]{{\color{blue} #1}}
+
+\newcommand{\courseName}{\href{https://16820advancedcv.github.io/}{16-820 Advanced Computer Vision (Fall 2024)}}
+\newcommand{\courseNum}{\href{https://16820advancedcv.github.io/}{16-820 Fall 2024}}
+\newcommand{\hwName}{Homework 3: 3D Reconstruction}
+\newcommand{\outDate}{Ocotber 3rd, 2024}
+\newcommand{\dueDate}{October 23rd, 2024}
+\newcommand{\instructorName}{Matthew O'Toole}
+\newcommand{\taNames}{Nikhil Keetha, Ayush Jain, Yuyao Shi}
+
+\pagestyle{fancyplain}
+\lhead{\fancyplain{}{\hwName}}
+\rhead{\fancyplain{}{\courseNum}}
+\cfoot{\thepage}
+
+\title{\textsc{\hwName}} % Title
+
+
+\author{\courseName\\
+\url{https://16820advancedcv.github.io/} \\
+\\
+OUT: \outDate{} \\
+DUE: \dueDate{} \\ 
+Instructor: \instructorName \\
+TAs: \taNames}
+
+\date{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Useful commands for typesetting the questions %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\points}[1]{{\bf [#1 points]}}
+\newcommand \expect {\mathbb{E}}
+\newcommand \mle [1]{{\hat #1}^{\rm MLE}}
+\newcommand \map [1]{{\hat #1}^{\rm MAP}}
+\newcommand \argmax {\operatorname*{argmax}}
+\newcommand \argmin {\operatorname*{argmin}}
+\newcommand \code [1]{{\tt #1}}
+\newcommand \datacount [1]{\#\{#1\}}
+\newcommand \ind [1]{\mathbb{I}\{#1\}}
+
+\newcommand{\emptysquare}{{\LARGE $\square$}\ \ }
+\newcommand{\filledsquare}{{\LARGE $\blacksquare$}\ \ }
+\newcommand{\emptycircle}{{\LARGE $\fullmoon$}\ \ }
+\newcommand{\filledcircle}{{\LARGE $\newmoon$}\ \ }
+
+\newtcolorbox[]{your_solution}[1][]{
+    % breakable,
+    enhanced,
+    nobeforeafter,
+    colback=white,
+    title=Your Answer,
+    sidebyside align=top,
+    box align=top,
+    #1
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document configuration %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Don't display a date in the title and remove the white space
+\predate{}
+\postdate{}
+\date{}
+
+% Don't display an author and remove the white space
+%\preauthor{}
+%\postauthor{}
+
+%%%%%%%%%%%%%%%%%%
+% Begin Document %
+%%%%%%%%%%%%%%%%%% 
+
+
+
+\begin{document}
+\maketitle
+
+
+\section*{Instructions/Hints}
+
+\begin{itemize}
+\item Please refer to the \href{https://canvas.cmu.edu/courses/32966/pages/logistics}{course logistics page} for information on the \textbf{Collaboration Policy} and \textbf{Late Submission Policy}.
+
+\item\textbf{Submitting your work:} There will be two submission slots for this homework on \textbf{Gradescope}: Written and Programming. 
+
+\begin{itemize}
+
+\item \textbf{Write-up.} For written problems such as short answers, multiple choice, derivations, proofs, or plots, we will be using the written submission slot. Please use this provided template. \textbf{We don't accept handwritten submissions.}  Each answer should be completed in the boxes provided below the question. You are allowed to adjust the size of these boxes, but \textbf{make sure to link your answer to each question when submitting to Gradescope}. Otherwise, your submission will not be graded. To use the provided template - upload the template .zip file directly to \href{https://overleaf.com}{Overleaf}.
+\item \textbf{Code.} You are also required to upload your code, which you wrote to solve this homework, to the Programming submission slot. Your code may be run by TAs so please make sure it is in a workable state. The assignment must be completed using Python 3.10.12. We recommend setting up python virtual environment (conda or venv) for the assignment.  
+\item Regrade requests can be made after the homework grades are released, however, this gives the TA the opportunity to regrade your entire paper, meaning if additional mistakes are found then points will be deducted. 
+\end{itemize}
+
+\item {\bf Start early!} This homework is difficult and may take a long time to complete.
+
+\item {\bf Verify your implementation as you proceed.} If you don't verify that your implementation is correct on toy examples, you will risk having a huge mess when you put everything together. 
+
+\item {\bf Q\&A.} If you have any questions or need clarifications, please post in Slack or visit the TAs during office hours. Additionally, we provide a \textbf{FAQ} (\autoref{sec:faqs}) with questions from previous semesters. Make sure you read it prior to starting your implementations.
+
+\end{itemize}
+
+\clearpage
+
+\section*{Overview}\label{sec:overview}
+
+In this assignment, you will be implementing an algorithm to reconstruct a 3D point cloud from a pair of images taken at different angles. In \autoref{part:theory} you will answer theory questions about 3D reconstruction. In \autoref{part:practice} you will apply the 8-point algorithm and triangulation to find and visualize 3D locations of corresponding image points.
+
+
+%\clearpage
+\input{part1_theory}
+\newpage
+\input{part2-1_overview}
+\input{part2-2_fundamental_matrix_estimation}
+\newpage
+\input{part2-3_metric_reconstruction}
+\newpage
+\input{part2-4_3D_visualization}
+\newpage
+\input{part2-5_bundle_adjustment}
+\newpage
+\input{part2-6_multiview_keypoint_reconstruction}
+
+
+\section{Deliverables}
+
+The assignment (code and write-up) should be submitted to Gradescope. The write-up should be named \texttt{<AndrewId>\_hw3.pdf} and the code should be a zip named \texttt{<AndrewId>\_hw3.zip}. \textbf{\textit{Please make sure that you assign the location of answers to each question on Gradescope.}} The zip should have the following files in the structure defined below. (Note: Neglecting to follow the submission structure will incur a huge score penalty!). You can run the included \texttt{checkA4Submission.py} script to ensure that your zip folder structure is correct.
+\begin{itemize}
+  \item \texttt{<AndrewId>\_hw3.pdf}: your write-up.
+  \item \texttt{q2\_1\_eightpoint.py}: script for Q2.1.
+  \item \texttt{q2\_2\_sevenpoint.py}: script for Q2.2.
+  \item \texttt{q3\_1\_essential\_matrix.py}: script for Q3.1.
+  \item \texttt{q3\_2\_triangulate.py}: script for Q3.2.
+  \item \texttt{q4\_1\_epipolar\_correspondence.py}: script for Q4.1.
+  \item \texttt{q4\_2\_visualize.py}: script for Q4.2.
+  \item \texttt{q5\_bundle\_adjustment.py}: script for Q5.
+  \item \texttt{q6\_ec\_multiview\_reconstruction.py}: script for (extra-credit) Q6.
+  \item \texttt{helper.py}: helper functions.
+  \item \texttt{q2\_1.npz}: file with output of Q2.1.
+  \item \texttt{q2\_2.npz}: file with output of Q2.2.
+  \item \texttt{q3\_1.npz}: file with output of Q3.1.
+  \item \texttt{q3\_3.npz}: file with output of Q3.3.
+  \item \texttt{q4\_1.npz}: file with output of Q4.1.
+  \item \texttt{q4\_2.npz}: file with output of Q4.2.
+  \item \texttt{q6\_1.npz}: (extra-credit) file with the output of Q6.1.
+\end{itemize}
+\textbf{*Do not include the data directory in your submission.}
+
+
+\section{FAQs} \emph{Credits: Paul Nadan}
+\label{sec:faqs}
+
+\noindent \textbf{Q2.1:} Does it matter if we unscale $\F$ before or after calling refineF?
+
+\textcolor{blue}{\noindent The relationship between $\F$ and $\F_{normalized}$ is fixed and defined by a set of transformations, so we can convert at any stage before or after refinement. The nonlinear optimization in refineF may work slightly better with normalized $\F$, but it should be fine either way.}
+
+\noindent \textbf{Q2.1:} Why does the other image disappear (or become really small) when I select a point using the displayEpipolarF GUI?
+
+\textcolor{blue}{This issue occurs when the corresponding epipolar line to the point you selected lies far away from the image. Something is likely wrong with your fundamental matrix.}
+
+\noindent \textbf{Q2.1 Note:} \textcolor{blue}{The GUI will provide the correct epipolar lines even if the program is using the wrong order of pts1 and pts2 in calculating the eightpoint algorithm. So one thing to check is that the optimizer should only take $<10$ iterations (shown in the output) to converge if the ordering is correct.}
+
+\noindent \textbf{Q3.2:} How can I get started formulating the triangulation equations?
+
+\textcolor{blue}{One possible method: from the first camera, $x_{1i}=P_1\omega_1 \implies x_{1i} \times P_1\omega_1=0\implies A_{1i}\omega_i=0$. This is a linear system of 3 equations, one of which is redundant (a linear combination of the other two), and 4 variables. We get a similar equation from the second camera, for a total of 4 (non-redundant) equations and 4 variables, i.e. $A_i\omega_i=0$.}
+
+\noindent \textbf{Q3.2:} What is the expected value of the reprojection error?
+
+\textcolor{blue}{The reprojection error for the data in \texttt{some\_corresp.npz} should be around 352 (or 89 without using refineF). If you get a reprojection error of around 94 (or 1927 without using refineF) then you have somehow ended up with a transposed $\F$ matrix in your eightpoint function.}
+
+\noindent \textbf{Q3.2:} If you are getting high reprojection error but can't find any errors in your triangulate function? 
+
+\textcolor{blue}{one useful trick is to temporarily comment out the call to refineF in your 8-point algorithm and make sure that the epipolar lines still match up. The refineF function can sometimes find a pretty good solution even starting from a totally incorrect matrix, which results in the F matrix passing the sanity checks even if there's an error in the 8-point function. However, having a slightly incorrect F matrix can still cause the reprojection error to be really high later on even if your triangulate code is correct.}
+
+\noindent \textbf{Q4.2 Note:} \textcolor{blue}{Figure 7 in the assignment document is incorrect - if you look closely you'll notice that the z coordinates are all negative. Don't worry if your solution is different from the example as long as the 3D structure of the temple is evident.}
+
+\noindent \textbf{Q5.1:} How many inliers should I be getting from RANSAC?
+
+\textcolor{blue}{The correct number of inliers should be around 106. This provides a good sanity check for whether the chosen tolerance value is appropriate. }
+
+
+\bibliographystyle{plain}
+\bibliography{ref}
+
+\end{document}
+
