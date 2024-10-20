@@ -30,7 +30,107 @@ We have provided some noisy correspondences in \texttt{some\_corresp\_noisy.npz}
     \item \emph{Hints:} Use the Eight or Seven point algorithm to compute the fundamental matrix from the minimal set of points. Then compute the inliers, and refine your estimate using all the inliers.
 \end{itemize}
 
-\begin{your_solution}[title=Q5.1,height=5.5cm,width=\linewidth]
+\begin{your_solution}[title=Q5.1,height=20.5cm,width=\linewidth]
+The following \autoref{fig:Q5_1_ran_res} shows the screenshot of RANSAC Seven Point algorithm result:
+\newline
+
+\begin{minipage}{1\linewidth}
+	\centering
+	\includegraphics[width=1\linewidth, height=0.39\columnwidth]{../Q5_1_ransac_seven_result.png}
+	\refstepcounter{figure}  % Increment the figure counter
+	\textbf{Figure \ref{fig:Q5_1_ran_res}:} Result of the RANSAC Seven Point Algorithm  % Manually add a caption/title
+	\label{fig:Q5_1_ran_res}         % Label for referencing	
+\end{minipage}
+\newline
+
+The following \autoref{fig:Q5_1_eig_res} shows the screenshot of Eight Point algorithm result:
+\newline
+
+\begin{minipage}{1\linewidth}
+	\centering
+	\includegraphics[width=1\linewidth, height=0.39\columnwidth]{../Q5_1_eight_result.png}
+	\refstepcounter{figure}  % Increment the figure counter
+	\textbf{Figure \ref{fig:Q5_1_eig_res}:} Result of the Eight Point Algorithm  % Manually add a caption/title
+	\label{fig:Q5_1_eig_res}         % Label for referencing	
+\end{minipage}
+\newline
+
+In RANSAC Seven Point Algorithm, I use nIters=1000, tol=2 to get above result, and the inlier number is 106, which is around 75\% with total number of points is 140. The reason that the RANSAC Seven Point Algorithm gets better result is that the points are noisy, and it is stated in the hw3.pdf that around 75\% of these noisy points are inliers. While RANSAC Seven Point Algorithm has the chance to reject outliers, the Eight Point Algorithm can only use all the points, including outliers, to calculate the Fundamental Matrix, F. Accordingly, RANSAC Seven Point Algorithm performs better than Eight Point Algorithm under noisy data.
+
+\end{your_solution}
+
+\newpage
+\begin{your_solution}[title=Q5.1 continued, height=22.5cm,width=\linewidth]
+The following shows the result of changing the value of the 'tol' parameter.
+\newline
+
+\begin{minipage}{1\linewidth}
+	\centering
+	\includegraphics[width=1\linewidth, height=0.39\columnwidth]{../Q5_1_ransac_seven_tol_1_result.png}
+	\refstepcounter{figure}  % Increment the figure counter
+	\textbf{Figure \ref{fig:Q5_1_tol_1_res}:} Result of the RANSAC Seven Point Algorithm w/ tol=1, inlier rate=65.71\% % Manually add a caption/title
+	\label{fig:Q5_1_tol_1_res}         % Label for referencing	
+\end{minipage}
+\hfill
+\begin{minipage}{1\linewidth}
+	\centering
+	\includegraphics[width=1\linewidth, height=0.39\columnwidth]{../Q5_1_ransac_seven_tol_0.5_result.png}
+	\refstepcounter{figure}  % Increment the figure counter
+	\textbf{Figure \ref{fig:Q5_1_tol_0.5_res}:} Result of the RANSAC Seven Point Algorithm w/ tol=0.5, inlier rate=52.86\% % Manually add a caption/title
+	\label{fig:Q5_1_tol_0.5_res}         % Label for referencing	
+\end{minipage}
+\hfill
+\begin{minipage}{1\linewidth}
+	\centering
+	\includegraphics[width=1\linewidth, height=0.39\columnwidth]{../Q5_1_ransac_seven_tol_4_result.png}
+	\refstepcounter{figure}  % Increment the figure counter
+	\textbf{Figure \ref{fig:Q5_1_tol_4_res}:} Result of the RANSAC Seven Point Algorithm w/ tol=4, inlier rate=76.43\% % Manually add a caption/title
+	\label{fig:Q5_1_tol_4_res}         % Label for referencing	
+\end{minipage}
+	
+\end{your_solution}
+\newpage
+\begin{your_solution}[title=Q5.1 continued, height=22.5cm,width=\linewidth]
+	\begin{minipage}{1\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth, height=0.39\columnwidth]{../Q5_1_ransac_seven_tol_8_result.png}
+		\refstepcounter{figure}  % Increment the figure counter
+		\textbf{Figure \ref{fig:Q5_1_tol_8_res}:} Result of the RANSAC Seven Point Algorithm w/ tol=8, inlier rate=78.57\% % Manually add a caption/title
+		\label{fig:Q5_1_tol_8_res}         % Label for referencing	
+	\end{minipage}
+	\hfill
+	\begin{minipage}{1\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth, height=0.39\columnwidth]{../Q5_1_ransac_seven_tol_16_result.png}
+		\refstepcounter{figure}  % Increment the figure counter
+		\textbf{Figure \ref{fig:Q5_1_tol_16_res}:} Result of the RANSAC Seven Point Algorithm w/ tol=16, inlier rate=79.29\% % Manually add a caption/title
+		\label{fig:Q5_1_tol_16_res}         % Label for referencing	
+	\end{minipage}
+	\hfill
+	\begin{minipage}{1\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth, height=0.39\columnwidth]{../Q5_1_ransac_seven_tol_128_result.png}
+		\refstepcounter{figure}  % Increment the figure counter
+		\textbf{Figure \ref{fig:Q5_1_tol_128_res}:} Result of the RANSAC Seven Point Algorithm w/ tol=128, inlier rate=80\% % Manually add a caption/title
+		\label{fig:Q5_1_tol_128_res}         % Label for referencing	
+	\end{minipage}
+\end{your_solution}
+\newpage
+\begin{your_solution}[title=Q5.1 continued, height=22.5cm,width=\linewidth]
+As we can see the results above that when tol is getting larger, specifically larger than 8, the result is getting worse. It is because the criteria to count a point as an inlier is getting laxer, and some of the outlier points are wrongly categorized as inliers. The resulted F is generated by some outliers and thus become worse. As for the necessary iteration number of RANSAC to get a good model, the value is calculated by k = $\frac{\log(1-p)}{\log(1-w^n)}$, where p = 0.999, w is about 0.75, and n=7, then k = 48.21, so the nIters=1000 should be sufficient to have RANSAC Sevent Point Algorithm to return a good model.
+\newline
+
+The following \autoref{fig:Q5_1_cns} shows the code snippet of the ransacF() function in q5\_bundle\_adjustment.py:	
+\newline
+
+
+\begin{minipage}{1\linewidth}
+	\centering
+	\includegraphics[width=1\linewidth, height=1\columnwidth]{../Q5_1_cns.png}
+	\refstepcounter{figure}  % Increment the figure counter
+	\textbf{Figure \ref{fig:Q5_1_cns}:} Code Snippet of the ransacF() Function  % Manually add a caption/title
+	\label{fig:Q5_1_cns}         % Label for referencing	
+\end{minipage}
 \end{your_solution}
 
 \subparagraph*{Q5.2 Rodrigues and Invsere Rodrigues}\points{15}

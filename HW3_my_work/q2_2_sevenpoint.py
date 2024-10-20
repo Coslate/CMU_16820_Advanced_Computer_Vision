@@ -17,15 +17,22 @@ def calCoeff(F_v1_smallest: np.ndarray, F_v2_smallest: np.ndarray) -> np.ndarray
     F_p1      = FalphaDet(1 , F_v1_smallest, F_v2_smallest)
     F_n1      = FalphaDet(-1, F_v1_smallest, F_v2_smallest)
     F_p2      = FalphaDet(2 , F_v1_smallest, F_v2_smallest)
-    F_p3      = FalphaDet(3 , F_v1_smallest, F_v2_smallest)
+    F_n2      = FalphaDet(-2 , F_v1_smallest, F_v2_smallest)
 
 
     # Calculate the coefficients for the polynomial equation
+    '''
     coefficients = np.zeros(4)
     coefficients[0] = F_p0
     coefficients[2] = (F_p1+F_n1)/2.0 - coefficients[0]
     coefficients[3] = (F_p3 - 9*coefficients[2] - coefficients[0])/15 - (F_p2 - 4*coefficients[2] - coefficients[0])/10
     coefficients[1] = F_p1 - (coefficients[0]+coefficients[2]+coefficients[3])
+    '''
+    coefficients = np.zeros(4)
+    coefficients[0] = F_p0
+    coefficients[2] = (F_p1+F_n1)/2.0 - coefficients[0]
+    coefficients[3] = (F_p2-F_n2)/12.0 - (F_p1-F_n1)/6.0
+    coefficients[1] = (F_p1-F_n1)/2.0 - coefficients[3]
 
     return coefficients
 
@@ -131,11 +138,25 @@ def sevenpoint(pts1, pts2, M):
     F_alpha_array = [Falpha(alpha, F_v1_matrix, F_v2_matrix) for alpha in roots]
 
     # Enforce singularity condition.
-    F_sing_array = [_singularize(F_matrix) for F_matrix in F_alpha_array]
+    F_sing_array = []
+    for F_matrix in F_alpha_array:
+        try:
+            F_sing = _singularize(F_matrix)
+        except np.linalg.LinAlgError as e:
+            F_sing = F_matrix.copy()
+        F_sing_array.append(F_sing)
+    #F_sing_array = [_singularize(F_matrix) for F_matrix in F_alpha_array]
     #F_sing_array = [F_matrix for F_matrix in F_alpha_array]
 
     # Refined the F
-    F_refine_array = [refineF(F_sing, pts1_norm, pts2_norm) for F_sing in F_sing_array]
+    F_refine_array = []
+    for F_sing in F_sing_array:
+        try:
+            F_refine = refineF(F_sing, pts1_norm, pts2_norm)
+        except np.linalg.LinAlgError as e:
+            F_refine = F_sing.copy()
+        F_refine_array.append(F_refine)
+    #F_refine_array = [refineF(F_sing, pts1_norm, pts2_norm) for F_sing in F_sing_array]
     #F_refine_array = [F_sing for F_sing in F_sing_array]
 
     # Unscale the F

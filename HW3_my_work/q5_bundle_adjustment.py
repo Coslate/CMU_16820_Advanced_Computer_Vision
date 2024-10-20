@@ -49,12 +49,47 @@ Q5.1: RANSAC method.
     (4) You can increase the nIters to bigger/smaller values
  
 """
+def getFSevenPoint(pts1_choice, pts2_choice, pts1_homo, pts2_homo, M, tol, file="debug.log"):
+    best_inlier = np.zeros((pts1_homo.shape[0], 1), dtype=bool)
+    best_F = None
+    best_inlier_cnt = -1
 
+    Fs = sevenpoint(pts1_choice, pts2_choice, M)
+    for F in Fs:
+        inlier = np.zeros((pts1_homo.shape[0], 1), dtype=bool)
+        error_all = np.abs(calc_epi_error(pts1_homo, pts2_homo, F))
+        inlier[error_all < tol] = True
+        inlier_cnt = np.sum(inlier)
+
+        if inlier_cnt > best_inlier_cnt:
+            best_inlier_cnt = inlier_cnt
+            best_F = F.copy()
+            best_inlier = inlier.copy()
+
+    return best_F, best_inlier, best_inlier_cnt
 
 def ransacF(pts1, pts2, M, nIters=1000, tol=10):
     # TODO: Replace pass by your implementation
-    pass
+    pts1_homo = np.hstack((pts1, np.ones((pts1.shape[0], 1))))
+    pts2_homo = np.hstack((pts2, np.ones((pts2.shape[0], 1))))
+    best_inlier = np.zeros((pts1_homo.shape[0], 1), dtype=bool)
+    best_F = None
+    best_inlier_cnt = -1
 
+    file = open("debug.log", "w")
+    for i in range(nIters):
+        inlier = np.zeros((pts1.shape[0], 1), dtype=bool)
+        choice = np.random.choice(range(pts1.shape[0]), 7)
+        pts1_choice = pts1[choice, :]
+        pts2_choice = pts2[choice, :]
+        cur_F, cur_inlier, cur_inlier_cnt = getFSevenPoint(pts1_choice, pts2_choice, pts1_homo, pts2_homo, M, tol, file=file)
+
+        if cur_inlier_cnt > best_inlier_cnt:
+            best_inlier_cnt = cur_inlier_cnt
+            best_F = cur_F.copy()
+            best_inlier = cur_inlier.copy()
+    
+    return best_F, best_inlier
 
 """
 Q5.2: Rodrigues formula.
@@ -137,9 +172,10 @@ if __name__ == "__main__":
     im1 = plt.imread("data/im1.png")
     im2 = plt.imread("data/im2.png")
 
-    F, inliers = ransacF(noisy_pts1, noisy_pts2, M=np.max([*im1.shape, *im2.shape]))
+    F, inliers = ransacF(noisy_pts1, noisy_pts2, M=np.max([*im1.shape, *im2.shape]), nIters=1000, tol=128)
+    print(f"number of inliers = {np.sum(inliers)}\ntotal number of points = {noisy_pts1.shape[0]}\ninlier rate = {np.sum(inliers)/noisy_pts1.shape[0]*100}%")
 
-    # displayEpipolarF(im1, im2, F)
+    displayEpipolarF(im1, im2, F)
 
     # Simple Tests to verify your implementation:
     pts1_homogenous, pts2_homogenous = toHomogenous(noisy_pts1), toHomogenous(
@@ -150,6 +186,12 @@ if __name__ == "__main__":
     assert F[2, 2] == 1
     assert np.linalg.matrix_rank(F) == 2
 
+    '''
+    F_eight = eightpoint(noisy_pts1, noisy_pts2, M=np.max([*im1.shape, *im2.shape]))
+    displayEpipolarF(im1, im2, F_eight)
+    '''
+
+    '''
     # Simple Tests to verify your implementation:
     from scipy.spatial.transform import Rotation as sRot
 
@@ -170,6 +212,7 @@ if __name__ == "__main__":
     im1 = plt.imread("data/im1.png")
     im2 = plt.imread("data/im2.png")
     M = np.max([*im1.shape, *im2.shape])
+    '''
 
     # TODO: YOUR CODE HERE
     """

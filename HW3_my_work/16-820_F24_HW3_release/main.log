@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.5)  19 OCT 2024 14:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.5)  20 OCT 2024 16:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1780,16 +1780,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 150--152
 
  []
 
-<../Q2_2_cns1.png, id=187, 718.18312pt x 761.84625pt>
+<../Q2_2_cns1.png, id=187, 720.44156pt x 960.58875pt>
 File: ../Q2_2_cns1.png Graphic file (type png)
 <use ../Q2_2_cns1.png>
 Package pdftex.def Info: ../Q2_2_cns1.png  used on input line 156.
-(pdftex.def)             Requested size: 210.45752pt x 223.25471pt.
-<../Q2_2_cns2.png, id=189, 736.25063pt x 327.47343pt>
+(pdftex.def)             Requested size: 210.45752pt x 280.60097pt.
+<../Q2_2_cns2.png, id=189, 733.99219pt x 336.50719pt>
 File: ../Q2_2_cns2.png Graphic file (type png)
 <use ../Q2_2_cns2.png>
 Package pdftex.def Info: ../Q2_2_cns2.png  used on input line 164.
-(pdftex.def)             Requested size: 210.45752pt x 93.60571pt.
+(pdftex.def)             Requested size: 210.45752pt x 96.48575pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 154--170
 
@@ -1804,6 +1804,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [8]
+Overfull \vbox (9.48337pt too high) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2093,6 +2096,36 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [21 <../Q4_2_cns.png>] (part2-5_bundle_adjustment.tex
+Underfull \hbox (badness 10000) in paragraph at lines 34--36
+
+ []
+
+<../Q5_1_ransac_seven_result.png, id=358, 721.94719pt x 280.79906pt>
+File: ../Q5_1_ransac_seven_result.png Graphic file (type png)
+<use ../Q5_1_ransac_seven_result.png>
+Package pdftex.def Info: ../Q5_1_ransac_seven_result.png  used on input line 39
+.
+(pdftex.def)             Requested size: 438.45934pt x 170.99582pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--48
+
+ []
+
+<../Q5_1_eight_result.png, id=361, 744.53156pt x 301.125pt>
+File: ../Q5_1_eight_result.png Graphic file (type png)
+<use ../Q5_1_eight_result.png>
+Package pdftex.def Info: ../Q5_1_eight_result.png  used on input line 51.
+(pdftex.def)             Requested size: 438.47456pt x 171.00435pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--57
+
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2110,21 +2143,116 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[23]
-<images/q5_3.png, id=374, 800.9925pt x 664.4825pt>
+[23 <../Q5_1_ransac_seven_result.png> <../Q5_1_eight_result.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 64--66
+
+ []
+
+<../Q5_1_ransac_seven_tol_1_result.png, id=379, 746.79pt x 295.85532pt>
+File: ../Q5_1_ransac_seven_tol_1_result.png Graphic file (type png)
+<use ../Q5_1_ransac_seven_tol_1_result.png>
+Package pdftex.def Info: ../Q5_1_ransac_seven_tol_1_result.png  used on input l
+ine 69.
+(pdftex.def)             Requested size: 438.45999pt x 171.00029pt.
+<../Q5_1_ransac_seven_tol_0.5_result.png, id=381, 746.79pt x 309.40594pt>
+File: ../Q5_1_ransac_seven_tol_0.5_result.png Graphic file (type png)
+<use ../Q5_1_ransac_seven_tol_0.5_result.png>
+Package pdftex.def Info: ../Q5_1_ransac_seven_tol_0.5_result.png  used on input
+ line 77.
+(pdftex.def)             Requested size: 438.45999pt x 171.00471pt.
+<../Q5_1_ransac_seven_tol_4_result.png, id=383, 742.27313pt x 281.55188pt>
+File: ../Q5_1_ransac_seven_tol_4_result.png Graphic file (type png)
+<use ../Q5_1_ransac_seven_tol_4_result.png>
+Package pdftex.def Info: ../Q5_1_ransac_seven_tol_4_result.png  used on input l
+ine 85.
+(pdftex.def)             Requested size: 438.45836pt x 170.99886pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[24 <../Q5_1_ransac_seven_tol_1_result.png> <../Q5_1_ransac_seven_tol_0.5_resul
+t.png> <../Q5_1_ransac_seven_tol_4_result.png>]
+<../Q5_1_ransac_seven_tol_8_result.png, id=396, 742.27313pt x 298.11375pt>
+File: ../Q5_1_ransac_seven_tol_8_result.png Graphic file (type png)
+<use ../Q5_1_ransac_seven_tol_8_result.png>
+Package pdftex.def Info: ../Q5_1_ransac_seven_tol_8_result.png  used on input l
+ine 96.
+(pdftex.def)             Requested size: 438.45836pt x 170.99557pt.
+<../Q5_1_ransac_seven_tol_16_result.png, id=398, 755.07094pt x 316.18124pt>
+File: ../Q5_1_ransac_seven_tol_16_result.png Graphic file (type png)
+<use ../Q5_1_ransac_seven_tol_16_result.png>
+Package pdftex.def Info: ../Q5_1_ransac_seven_tol_16_result.png  used on input 
+line 104.
+(pdftex.def)             Requested size: 438.45992pt x 171.00067pt.
+<../Q5_1_ransac_seven_tol_128_result.png, id=400, 724.20563pt x 283.81032pt>
+File: ../Q5_1_ransac_seven_tol_128_result.png Graphic file (type png)
+<use ../Q5_1_ransac_seven_tol_128_result.png>
+Package pdftex.def Info: ../Q5_1_ransac_seven_tol_128_result.png  used on input
+ line 112.
+(pdftex.def)             Requested size: 438.4607pt x 171.00204pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[25 <../Q5_1_ransac_seven_tol_8_result.png> <../Q5_1_ransac_seven_tol_16_result
+.png> <../Q5_1_ransac_seven_tol_128_result.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 120--122
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--125
+[]\OT1/ptm/m/n/10.95 The fol-low-ing [][]Fig-ure 33[][][] shows the code snip-p
+et of the ransacF() func-tion in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--125
+
+ []
+
+<../Q5_1_cns.png, id=415, 769.37437pt x 835.62187pt>
+File: ../Q5_1_cns.png Graphic file (type png)
+<use ../Q5_1_cns.png>
+Package pdftex.def Info: ../Q5_1_cns.png  used on input line 129.
+(pdftex.def)             Requested size: 438.46577pt x 438.46579pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[26 <../Q5_1_cns.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[27]
+<images/q5_3.png, id=434, 800.9925pt x 664.4825pt>
 File: images/q5_3.png Graphic file (type png)
 <use images/q5_3.png>
-Package pdftex.def Info: images/q5_3.png  used on input line 95.
+Package pdftex.def Info: images/q5_3.png  used on input line 195.
 (pdftex.def)             Requested size: 211.38832pt x 175.357pt.
-<images/q5_3b.png, id=375, 921.4425pt x 893.3375pt>
+<images/q5_3b.png, id=435, 921.4425pt x 893.3375pt>
 File: images/q5_3b.png Graphic file (type png)
 <use images/q5_3b.png>
-Package pdftex.def Info: images/q5_3b.png  used on input line 96.
+Package pdftex.def Info: images/q5_3b.png  used on input line 196.
 (pdftex.def)             Requested size: 187.89914pt x 182.16756pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 )
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2134,33 +2262,34 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[24] (part2-6_multiview_keypoint_reconstruction.tex
-<images/q6/cam1_time4_det.png, id=383, 602.25pt x 301.125pt>
+[28 <./images/q5_3.png> <./images/q5_3b.png>]
+(part2-6_multiview_keypoint_reconstruction.tex
+<images/q6/cam1_time4_det.png, id=446, 602.25pt x 301.125pt>
 File: images/q6/cam1_time4_det.png Graphic file (type png)
 <use images/q6/cam1_time4_det.png>
 Package pdftex.def Info: images/q6/cam1_time4_det.png  used on input line 7.
 (pdftex.def)             Requested size: 150.32504pt x 75.16159pt.
-<images/q6/cam2_time4_det.png, id=384, 602.25pt x 301.125pt>
+<images/q6/cam2_time4_det.png, id=447, 602.25pt x 301.125pt>
 File: images/q6/cam2_time4_det.png Graphic file (type png)
 <use images/q6/cam2_time4_det.png>
 Package pdftex.def Info: images/q6/cam2_time4_det.png  used on input line 8.
 (pdftex.def)             Requested size: 150.32504pt x 75.16159pt.
-<images/q6/cam3_time4_det.png, id=385, 359.84438pt x 204.01219pt>
+<images/q6/cam3_time4_det.png, id=448, 359.84438pt x 204.01219pt>
 File: images/q6/cam3_time4_det.png Graphic file (type png)
 <use images/q6/cam3_time4_det.png>
 Package pdftex.def Info: images/q6/cam3_time4_det.png  used on input line 9.
 (pdftex.def)             Requested size: 150.32504pt x 85.22693pt.
-<images/q6/time4_recon_1.png, id=386, 255.1131pt x 234.1548pt>
+<images/q6/time4_recon_1.png, id=449, 255.1131pt x 234.1548pt>
 File: images/q6/time4_recon_1.png Graphic file (type png)
 <use images/q6/time4_recon_1.png>
 Package pdftex.def Info: images/q6/time4_recon_1.png  used on input line 10.
 (pdftex.def)             Requested size: 150.32504pt x 137.97505pt.
-<images/q6/time4_recon_2.png, id=387, 263.0628pt x 218.2554pt>
+<images/q6/time4_recon_2.png, id=450, 263.0628pt x 218.2554pt>
 File: images/q6/time4_recon_2.png Graphic file (type png)
 <use images/q6/time4_recon_2.png>
 Package pdftex.def Info: images/q6/time4_recon_2.png  used on input line 11.
 (pdftex.def)             Requested size: 150.32504pt x 124.72656pt.
-<images/q6/time4_recon_3.png, id=388, 325.215pt x 246.4407pt>
+<images/q6/time4_recon_3.png, id=451, 325.215pt x 246.4407pt>
 File: images/q6/time4_recon_3.png Graphic file (type png)
 <use images/q6/time4_recon_3.png>
 Package pdftex.def Info: images/q6/time4_recon_3.png  used on input line 12.
@@ -2174,8 +2303,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[25 <./images/q5_3.png> <./images/q5_3b.png>]
-<images/q6/temporal_new.png, id=403, 2754.29pt x 1260.71pt>
+[29 <./images/q6/cam1_time4_det.png> <./images/q6/cam2_time4_det.png> <./images
+/q6/cam3_time4_det.png> <./images/q6/time4_recon_1.png> <./images/q6/time4_reco
+n_2.png> <./images/q6/time4_recon_3.png>]
+<images/q6/temporal_new.png, id=465, 2754.29pt x 1260.71pt>
 File: images/q6/temporal_new.png Graphic file (type png)
 <use images/q6/temporal_new.png>
 Package pdftex.def Info: images/q6/temporal_new.png  used on input line 43.
@@ -2189,9 +2320,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[26 <./images/q6/cam1_time4_det.png> <./images/q6/cam2_time4_det.png> <./images
-/q6/cam3_time4_det.png> <./images/q6/time4_recon_1.png> <./images/q6/time4_reco
-n_2.png> <./images/q6/time4_recon_3.png>])
+[30 <./images/q6/temporal_new.png>])
 Underfull \hbox (badness 10000) in paragraph at lines 58--197
 
  []
@@ -2204,7 +2333,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[27 <./images/q6/temporal_new.png>]
+[31]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2213,7 +2342,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[28] (main.bbl)
+[32] (main.bbl)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2222,7 +2351,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[29] 
+[33] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (main.aux)
  ***********
@@ -2233,10 +2362,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: C2BDDFC5CE635585611338C6B3B47651;1853.
  ) 
 Here is how much of TeX's memory you used:
- 38709 strings out of 474486
- 791368 string characters out of 5740416
+ 38806 strings out of 474486
+ 794431 string characters out of 5740416
  1960542 words of memory out of 5000000
- 60149 multiletter control sequences out of 15000+600000
+ 60233 multiletter control sequences out of 15000+600000
  598995 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,22n,87p,1378b,855s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2263,9 +2392,9 @@ Chen/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users
 a.pfb><C:/Users/Patrick Chen/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmr8a.pfb><C:/Users/Patrick Chen/AppData/Local/Programs/MiKTeX/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on main.pdf (29 pages, 9931181 bytes).
+Output written on main.pdf (33 pages, 13190814 bytes).
 PDF statistics:
- 533 PDF objects out of 1000 (max. 8388607)
- 100 named destinations out of 1000 (max. 500000)
- 294 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 596 PDF objects out of 1000 (max. 8388607)
+ 113 named destinations out of 1000 (max. 500000)
+ 339 words of extra memory for PDF output out of 10000 (max. 10000000)
 
