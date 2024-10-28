@@ -32,7 +32,7 @@ with ZipFile(zip_path, "r") as zip:
     filelist = zip.namelist()
 
 correct_files = [
-    andrewid + "_hw3.pdf",
+    #andrewid + "_hw3.pdf",
     "q2_1_eightpoint.py",
     "q2_2_sevenpoint.py",
     "q3_1_essential_matrix.py",

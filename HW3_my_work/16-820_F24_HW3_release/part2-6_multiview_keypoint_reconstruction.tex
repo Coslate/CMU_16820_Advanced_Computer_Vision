@@ -34,8 +34,80 @@ The 2D part detections (\texttt{pts}) are computed using a neural network\footno
 \end{itemize}
 }
 
-\begin{your_solution}[title=Q6.1,height=5.5cm,width=\linewidth]
+\begin{your_solution}[title=Q6.1,height=21.5cm,width=\linewidth]
+The following \autoref{fig:Q6_1_res_car1}, \autoref{fig:Q6_1_res_car2}, \autoref{fig:Q6_1_res_car3} show the three views of the car, and \autoref{fig:Q6_1_res_recon1}, \autoref{fig:Q6_1_res_recon2}, \autoref{fig:Q6_1_res_recon3} show the 3D reconstruction results of the car. The mothod is that I firstly compare each of the confidence of point in view1, view2, and view3 to see whether the value is larger than Thres, the threshold. If a point has three views with confidence larger than the threshold, then I would use the triangulate function to calculate the 3D position between any two of the views, and choose the one with positive Z value as the 3D reconstruction of the point. If there are more than one 3D reconstruction with positive Z value, then I would average all of the valid 3D positions as my final result. If there are only two of the three views that the current point has confidence larger than the threshold, then I would directly use the two views to reconstruct the 3D position, but I only pick the result with positive Z, otherwise, I would abandon the result. If there is only less than or equalt to one view that has confidence larger than Thres, then I would not count it as a reliable result and just abandon it. \newline
+I once implemented the triangulate3Points() function at line 10 - line 43 in q6\_ec\_multiview\_reconstruction.py, which I revise the A matrix to include the third point, resulting in a 6x4 matrix, and solve it with SVD to get least right eigen vector v (non-homogeneous) as my reconstructed position, but found out the reprojection error is nearly 3000. Comparing with the result with reprojection error only about 700, I give up the triangulate3Points() and replace it with the method mentioned in the first paragraph above. Right now, the result of the MultivewReconstruction() has reprojection error nearly 700.
+\newline
+
+% Top row of images
+\begin{minipage}[b]{0.32\textwidth}
+	\centering
+	\includegraphics[width=\textwidth]{../Q6_1_res_car1.png}
+	\refstepcounter{figure}  % Increment the figure counter
+	\textbf{Figure \ref{fig:Q6_1_res_car1}:} View 1 of the Car
+	\label{fig:Q6_1_res_car1}         % Label for referencing
+\end{minipage}
+\begin{minipage}[b]{0.32\textwidth}
+	\centering
+	\includegraphics[width=\textwidth]{../Q6_1_res_car2.png}
+	\refstepcounter{figure}  % Increment the figure counter
+	\textbf{Figure \ref{fig:Q6_1_res_car2}:} View 2 of the Car
+	\label{fig:Q6_1_res_car2}  
+\end{minipage}
+\begin{minipage}[b]{0.32\textwidth}
+	\centering
+	\includegraphics[width=\textwidth]{../Q6_1_res_car3.png}
+	\refstepcounter{figure}  % Increment the figure counter
+	\textbf{Figure \ref{fig:Q6_1_res_car3}:} View 3 of the Car
+	\label{fig:Q6_1_res_car3}  
+\end{minipage}
+\newline % Line break to move to the next row
+
+% Bottom row of images
+\begin{minipage}[b]{0.34\textwidth}
+	\centering
+	\includegraphics[width=\textwidth]{../Q6_1_res_recon1.png}
+	\refstepcounter{figure}  % Increment the figure counter
+	\textbf{Figure \ref{fig:Q6_1_res_recon1}:} 3D Reconstruction View 1 of the Car
+	\label{fig:Q6_1_res_recon1}  
+\end{minipage}
+\begin{minipage}[b]{0.28\textwidth}
+	\centering
+	\includegraphics[width=\textwidth]{../Q6_1_res_recon2.png}
+	\refstepcounter{figure}  % Increment the figure counter
+	\textbf{Figure \ref{fig:Q6_1_res_recon2}:} 3D Reconstruction View 2 of the Car
+	\label{fig:Q6_1_res_recon2}  
+\end{minipage}
+\begin{minipage}[b]{0.34\textwidth}
+	\centering
+	\includegraphics[width=\textwidth]{../Q6_1_res_recon3.png}
+	\refstepcounter{figure}  % Increment the figure counter
+	\textbf{Figure \ref{fig:Q6_1_res_recon3}:} 3D Reconstruction View 3 of the Car
+	\label{fig:Q6_1_res_recon3}  
+\end{minipage}
 \end{your_solution}
+\newpage
+\begin{your_solution}[title=Q6.1 continued,height=11.5cm,width=\linewidth]
+	The following \autoref{fig:Q6_1_cns1} and \autoref{fig:Q6_1_cns2}show the code snippets of the function MultivewReconstruction() in q6\_ec\_multiview\_reconstruction.py
+	\newline
+	
+	% Top row of images
+	\begin{minipage}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../Q6_1_cns1.png}
+		\refstepcounter{figure}  % Increment the figure counter
+		\textbf{Figure \ref{fig:Q6_1_cns1}:} Code Snippet1 of MultivewReconstruction()
+		\label{fig:Q6_1_cns1}         % Label for referencing
+	\end{minipage}
+	\begin{minipage}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../Q6_1_cns2.png}
+		\refstepcounter{figure}  % Increment the figure counter
+		\textbf{Figure \ref{fig:Q6_1_cns2}:} Code Snippet2 of MultivewReconstruction()
+		\label{fig:Q6_1_cns2}  
+	\end{minipage}
+\end{your_solution}
+
 
 \subparagraph*{Q6.2}\points{Extra Credit - 15}
 \begin{figure}[t]
@@ -54,5 +126,46 @@ From the previous question you have done a 3D reconstruction at a time instance.
 \end{itemize}
 }
 
-\begin{your_solution}[title=Q6.2,height=5.5cm,width=\linewidth]
+\begin{your_solution}[title=Q6.2,height=15.5cm,width=\linewidth]
+	The following \autoref{fig:Q6_2_res} shows the spatio-temporal reconstruction of the car for the 10 time steps.	The averaged reprojection error of the 10 time steps is around 700.
+	\newline
+	
+\begin{minipage}{1\linewidth}
+	\centering
+	\includegraphics[width=0.8\linewidth, height=0.8\columnwidth]{../Q6_2_res.png}
+	\refstepcounter{figure}  % Increment the figure counter
+	\newline
+	\textbf{Figure \ref{fig:Q6_2_res}:}  Result of the 3D Reconstruction of 10 Time Steps
+	\label{fig:Q6_2_res}         % Label for referencing	
+\end{minipage}	
+\end{your_solution}
+\begin{your_solution}[title=Q6.2 continued,height=12.5cm,width=\linewidth]
+	The following \autoref{fig:Q6_2_cns1} and \autoref{fig:Q6_2_cns2} show the code snippets of the function plot\_3d\_keypoint\_video() in q6\_ec\_multiview\_reconstruction.py
+\newline
+
+% Top row of images
+\begin{minipage}[b]{0.5\textwidth}
+	\centering
+	\includegraphics[width=\textwidth]{../Q6_2_cns1.png}
+	\refstepcounter{figure}  % Increment the figure counter
+	\textbf{Figure \ref{fig:Q6_2_cns1}:} Code Snippet of plot\_3d\_keypoint\_video()
+	\label{fig:Q6_2_cns1}         % Label for referencing
+\end{minipage}
+\begin{minipage}[b]{0.5\textwidth}
+	\centering
+	\includegraphics[width=\textwidth]{../Q6_2_cns2.png}
+	\refstepcounter{figure}  % Increment the figure counter
+	\textbf{Figure \ref{fig:Q6_2_cns2}:} Code Snippet of Main/Test function.
+	\label{fig:Q6_2_cns2}  
+\end{minipage}	
+\end{your_solution}
+
+\begin{your_solution}[title=Collaboration,height=4.5cm,width=\linewidth]
+Though I do not have collaborators, I found the following websites helpful on understanding the concepts in this homework.
+\begin{enumerate}
+	\item \url{https://szeliski.org/Book/}
+	\item \url{https://en.wikipedia.org/wiki/Rodrigues%27_formula}
+	\item \url{https://courses.cs.duke.edu//fall13/compsci527/notes/rodrigues.pdf}
+	\item \url{https://imkaywu.github.io/blog/2017/06/fundamental-matrix/}		
+\end{enumerate}
 \end{your_solution}

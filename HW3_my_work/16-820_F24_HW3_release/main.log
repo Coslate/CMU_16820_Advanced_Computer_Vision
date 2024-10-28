@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.5)  22 OCT 2024 14:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.5)  26 OCT 2024 00:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2421,11 +2421,143 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [32 <./images/q6/cam1_time4_det.png> <./images/q6/cam2_time4_det.png> <./images
 /q6/cam3_time4_det.png> <./images/q6/time4_recon_1.png> <./images/q6/time4_reco
 n_2.png> <./images/q6/time4_recon_3.png>]
-<images/q6/temporal_new.png, id=526, 2754.29pt x 1260.71pt>
+Underfull \hbox (badness 10000) in paragraph at lines 38--41
+\OT1/ptm/m/n/10.95 I once im-ple-mented the tri-an-gu-late3Points() func-tion a
+t line 10 - line 43 in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--41
+
+ []
+
+<../Q6_1_res_car1.png, id=532, 482.55281pt x 246.1697pt>
+File: ../Q6_1_res_car1.png Graphic file (type png)
+<use ../Q6_1_res_car1.png>
+Package pdftex.def Info: ../Q6_1_res_car1.png  used on input line 45.
+(pdftex.def)             Requested size: 140.30946pt x 71.57518pt.
+<../Q6_1_res_car2.png, id=534, 434.37282pt x 248.42813pt>
+File: ../Q6_1_res_car2.png Graphic file (type png)
+<use ../Q6_1_res_car2.png>
+Package pdftex.def Info: ../Q6_1_res_car2.png  used on input line 52.
+(pdftex.def)             Requested size: 140.30946pt x 80.24539pt.
+<../Q6_1_res_car3.png, id=536, 405.76593pt x 260.47313pt>
+File: ../Q6_1_res_car3.png Graphic file (type png)
+<use ../Q6_1_res_car3.png>
+Package pdftex.def Info: ../Q6_1_res_car3.png  used on input line 59.
+(pdftex.def)             Requested size: 140.30946pt x 90.06999pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--65
+
+ []
+
+<../Q6_1_res_recon1.png, id=538, 387.69844pt x 307.90031pt>
+File: ../Q6_1_res_recon1.png Graphic file (type png)
+<use ../Q6_1_res_recon1.png>
+Package pdftex.def Info: ../Q6_1_res_recon1.png  used on input line 69.
+(pdftex.def)             Requested size: 149.07379pt x 118.38928pt.
+<../Q6_1_res_recon2.png, id=540, 292.84406pt x 298.86656pt>
+File: ../Q6_1_res_recon2.png Graphic file (type png)
+<use ../Q6_1_res_recon2.png>
+Package pdftex.def Info: ../Q6_1_res_recon2.png  used on input line 76.
+(pdftex.def)             Requested size: 122.76744pt x 125.29507pt.
+<../Q6_1_res_recon3.png, id=542, 374.14781pt x 289.08pt>
+File: ../Q6_1_res_recon3.png Graphic file (type png)
+<use ../Q6_1_res_recon3.png>
+Package pdftex.def Info: ../Q6_1_res_recon3.png  used on input line 83.
+(pdftex.def)             Requested size: 149.07379pt x 115.18002pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[33]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[34 <../Q6_1_res_car1.png> <../Q6_1_res_car2.png> <../Q6_1_res_car3.png> <../Q6
+_1_res_recon1.png> <../Q6_1_res_recon2.png> <../Q6_1_res_recon3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 91--93
+
+ []
+
+<../Q6_1_cns1.png, id=568, 907.13907pt x 912.40875pt>
+File: ../Q6_1_cns1.png Graphic file (type png)
+<use ../Q6_1_cns1.png>
+Package pdftex.def Info: ../Q6_1_cns1.png  used on input line 97.
+(pdftex.def)             Requested size: 219.22853pt x 220.50009pt.
+<../Q6_1_cns2.png, id=570, 733.23938pt x 493.0922pt>
+File: ../Q6_1_cns2.png Graphic file (type png)
+<use ../Q6_1_cns2.png>
+Package pdftex.def Info: ../Q6_1_cns2.png  used on input line 104.
+(pdftex.def)             Requested size: 219.22853pt x 147.42468pt.
+
+Overfull \hbox (2.08049pt too wide) in paragraph at lines 95--109
+[][] [] 
+ []
+
+<images/q6/temporal_new.png, id=572, 2754.29pt x 1260.71pt>
 File: images/q6/temporal_new.png Graphic file (type png)
 <use images/q6/temporal_new.png>
-Package pdftex.def Info: images/q6/temporal_new.png  used on input line 43.
+Package pdftex.def Info: images/q6/temporal_new.png  used on input line 115.
 (pdftex.def)             Requested size: 469.75502pt x 215.01039pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[35 <./images/q6/temporal_new.png> <../Q6_1_cns1.png> <../Q6_1_cns2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 130--132
+
+ []
+
+<../Q6_2_res.png, id=586, 543.53062pt x 478.03593pt>
+File: ../Q6_2_res.png Graphic file (type png)
+<use ../Q6_2_res.png>
+Package pdftex.def Info: ../Q6_2_res.png  used on input line 135.
+(pdftex.def)             Requested size: 350.77774pt x 350.765pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--145
+[]\OT1/ptm/m/n/10.95 The fol-low-ing [][]Fig-ure 55[][][] and [][]Fig-ure 56[][
+][] show the code snip-pets of the func-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--145
+
+ []
+
+<../Q6_2_cns1.png, id=590, 578.16pt x 495.35063pt>
+File: ../Q6_2_cns1.png Graphic file (type png)
+<use ../Q6_2_cns1.png>
+Package pdftex.def Info: ../Q6_2_cns1.png  used on input line 149.
+(pdftex.def)             Requested size: 219.22853pt x 187.82704pt.
+<../Q6_2_cns2.png, id=592, 698.61pt x 828.84656pt>
+File: ../Q6_2_cns2.png Graphic file (type png)
+<use ../Q6_2_cns2.png>
+Package pdftex.def Info: ../Q6_2_cns2.png  used on input line 156.
+(pdftex.def)             Requested size: 219.22853pt x 260.10156pt.
+
+Overfull \hbox (2.08049pt too wide) in paragraph at lines 147--161
+[][] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
+[][][]$\OT1/pcr/m/n/10.95 https : / / courses . cs . duke . edu / /fall13 / com
+psci527 / notes /
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2435,8 +2567,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[33 <./images/q6/temporal_new.png>])
-Underfull \hbox (badness 10000) in paragraph at lines 58--197
+[36 <../Q6_2_res.png>])
+Underfull \hbox (badness 10000) in paragraph at lines 171--197
 
  []
 
@@ -2448,7 +2580,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[34]
+[37 <../Q6_2_cns1.png> <../Q6_2_cns2.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2457,7 +2589,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[35] (main.bbl)
+[38] (main.bbl)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2466,7 +2598,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[36] 
+[39] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (main.aux)
  ***********
@@ -2477,10 +2609,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: C2BDDFC5CE635585611338C6B3B47651;1853.
  ) 
 Here is how much of TeX's memory you used:
- 38901 strings out of 474486
- 796320 string characters out of 5740416
+ 39027 strings out of 474486
+ 799050 string characters out of 5740416
  1960542 words of memory out of 5000000
- 60316 multiletter control sequences out of 15000+600000
+ 60424 multiletter control sequences out of 15000+600000
  598995 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,22n,87p,1378b,855s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2507,9 +2639,9 @@ Chen/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users
 a.pfb><C:/Users/Patrick Chen/AppData/Local/Programs/MiKTeX/fonts/type1/urw/time
 s/utmr8a.pfb><C:/Users/Patrick Chen/AppData/Local/Programs/MiKTeX/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on main.pdf (36 pages, 13865554 bytes).
+Output written on main.pdf (39 pages, 15412688 bytes).
 PDF statistics:
- 658 PDF objects out of 1000 (max. 8388607)
- 125 named destinations out of 1000 (max. 500000)
- 384 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 743 PDF objects out of 1000 (max. 8388607)
+ 143 named destinations out of 1000 (max. 500000)
+ 439 words of extra memory for PDF output out of 10000 (max. 10000000)
 
