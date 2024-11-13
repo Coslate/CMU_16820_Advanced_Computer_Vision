@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.5)  3 NOV 2024 22:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.5)  8 NOV 2024 23:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -874,14 +874,179 @@ Package pdftex.def Info: ./images/04_deep.jpg  used on input line 560.
 [24 <./Q44_res1.png> <./Q44_add_space1.png> <./images/01_list.jpg> <./Q44_res2.
 png> <./Q44_add_space2.png> <./images/02_letters.jpg> <./Q44_res3.png> <./Q44_a
 dd_space3.png> <./images/03_haiku.jpg> <./Q44_res4.png> <./Q44_add_space4.png> 
-<./images/04_deep.jpg>] [25]
-Overfull \hbox (238.48914pt too wide) in paragraph at lines 581--582
-[][]$\OT1/cmtt/m/n/10 https : / / stats . stackexchange . com / questions / 559
-575 / how-[]does-[]addition-[]of-[]a-[]regularization-[]term-[]ensures-[]that-[
-]the-[]matrix-[]is-[]nonsingula$[] 
+<./images/04_deep.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 569--572
+
  []
 
-[26] (bochunc_hw4.aux)
+<./Q51_cns.png, id=321, 623.32875pt x 914.66719pt>
+File: ./Q51_cns.png Graphic file (type png)
+<use ./Q51_cns.png>
+Package pdftex.def Info: ./Q51_cns.png  used on input line 576.
+(pdftex.def)             Requested size: 375.80542pt x 551.45633pt.
+[25 <./Q51_cns.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 585--588
+
+ []
+
+<./Q52_cns.png, id=330, 1001.24063pt x 572.89032pt>
+File: ./Q52_cns.png Graphic file (type png)
+<use ./Q52_cns.png>
+Package pdftex.def Info: ./Q52_cns.png  used on input line 592.
+(pdftex.def)             Requested size: 469.75499pt x 268.78644pt.
+[26 <./Q52_cns.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 601--604
+
+ []
+
+<./Q52_res.png, id=339, 453.94594pt x 333.49594pt>
+File: ./Q52_res.png Graphic file (type png)
+<use ./Q52_res.png>
+Package pdftex.def Info: ./Q52_res.png  used on input line 608.
+(pdftex.def)             Requested size: 469.75499pt x 345.11269pt.
+[27 <./Q52_res.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 617--620
+
+ []
+
+<./Q53_res.png, id=348, 438.13687pt x 513.41812pt>
+File: ./Q53_res.png Graphic file (type png)
+<use ./Q53_res.png>
+Package pdftex.def Info: ./Q53_res.png  used on input line 624.
+(pdftex.def)             Requested size: 375.80542pt x 440.38719pt.
+[28 <./Q53_res.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 633--636
+
+ []
+
+<./Q54_res.png, id=357, 896.59969pt x 471.26062pt>
+File: ./Q54_res.png Graphic file (type png)
+<use ./Q54_res.png>
+Package pdftex.def Info: ./Q54_res.png  used on input line 640.
+(pdftex.def)             Requested size: 375.80542pt x 197.52542pt.
+[29 <./Q54_res.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 649--652
+
+ []
+
+<./Q6_1_res.png, id=368, 790.45313pt x 359.84438pt>
+File: ./Q6_1_res.png Graphic file (type png)
+<use ./Q6_1_res.png>
+Package pdftex.def Info: ./Q6_1_res.png  used on input line 657.
+(pdftex.def)             Requested size: 375.80542pt x 171.08159pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 654--665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 654--665
+
+ []
+
+<./Q6_1_cns1.png, id=369, 927.465pt x 662.475pt>
+File: ./Q6_1_cns1.png Graphic file (type png)
+<use ./Q6_1_cns1.png>
+Package pdftex.def Info: ./Q6_1_cns1.png  used on input line 669.
+(pdftex.def)             Requested size: 225.48038pt x 161.04929pt.
+<./Q6_1_cns2.png, id=371, 601.4972pt x 488.57532pt>
+File: ./Q6_1_cns2.png Graphic file (type png)
+<use ./Q6_1_cns2.png>
+Package pdftex.def Info: ./Q6_1_cns2.png  used on input line 677.
+(pdftex.def)             Requested size: 225.48038pt x 183.1482pt.
+<./Q6_1_cns3.png, id=373, 459.96844pt x 741.52031pt>
+File: ./Q6_1_cns3.png Graphic file (type png)
+<use ./Q6_1_cns3.png>
+Package pdftex.def Info: ./Q6_1_cns3.png  used on input line 686.
+(pdftex.def)             Requested size: 422.77661pt x 681.59598pt.
+[30 <./Q6_1_res.png> <./Q6_1_cns1.png> <./Q6_1_cns2.png>]
+Overfull \vbox (55.56421pt too high) has occurred while \output is active []
+
+
+[31 <./Q6_1_cns3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 695--698
+
+ []
+
+<./Q6_1_2_res.png, id=394, 839.38594pt x 356.0803pt>
+File: ./Q6_1_2_res.png Graphic file (type png)
+<use ./Q6_1_2_res.png>
+Package pdftex.def Info: ./Q6_1_2_res.png  used on input line 702.
+(pdftex.def)             Requested size: 469.75499pt x 199.27864pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 699--709
+
+ []
+
+<./Q6_1_2_cns.png, id=395, 770.12718pt x 633.86812pt>
+File: ./Q6_1_2_cns.png Graphic file (type png)
+<use ./Q6_1_2_cns.png>
+Package pdftex.def Info: ./Q6_1_2_cns.png  used on input line 713.
+(pdftex.def)             Requested size: 328.82706pt x 270.64291pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 710--720
+
+ []
+
+[32 <./Q6_1_2_res.png> <./Q6_1_2_cns.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 723--726
+
+ []
+
+<./Q6_1_3_res.png, id=406, 828.09375pt x 353.06906pt>
+File: ./Q6_1_3_res.png Graphic file (type png)
+<use ./Q6_1_3_res.png>
+Package pdftex.def Info: ./Q6_1_3_res.png  used on input line 730.
+(pdftex.def)             Requested size: 469.75499pt x 200.2925pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 727--737
+
+ []
+
+[33 <./Q6_1_3_res.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 741--744
+
+ []
+
+<./Q6_2_ft.png, id=415, 828.09375pt x 353.06906pt>
+File: ./Q6_2_ft.png Graphic file (type png)
+<use ./Q6_2_ft.png>
+Package pdftex.def Info: ./Q6_2_ft.png  used on input line 748.
+(pdftex.def)             Requested size: 469.75499pt x 200.2925pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 745--755
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 756--758
+
+ []
+
+<./Q6_2_or.png, id=417, 802.49812pt x 351.56343pt>
+File: ./Q6_2_or.png Graphic file (type png)
+<use ./Q6_2_or.png>
+Package pdftex.def Info: ./Q6_2_or.png  used on input line 762.
+(pdftex.def)             Requested size: 469.75499pt x 205.7952pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 759--769
+
+ []
+
+[34 <./Q6_2_ft.png> <./Q6_2_or.png>] [35]
+Overfull \hbox (90.99042pt too wide) in paragraph at lines 781--782
+[][]$\OT1/cmtt/m/n/10 https : / / www . geeksforgeeks . org / how-[]do-[]you-[]
+use-[]pytorchs-[]dataset-[]and-[]dataloader-[]classes-[]for-[]custom-[]data/$[]
+ 
+ []
+
+
+Overfull \hbox (12.49106pt too wide) in paragraph at lines 783--784
+[][]$\OT1/cmtt/m/n/10 https : / / pytorch . org / tutorials / beginner / data _
+ loading _ tutorial . html # afterword-[]torchvision$[] 
+ []
+
+[36] (bochunc_hw4.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -890,10 +1055,10 @@ Package rerunfilecheck Info: File `bochunc_hw4.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 11991 strings out of 474486
- 192818 string characters out of 5740416
+ 12137 strings out of 474486
+ 195369 string characters out of 5740416
  1934542 words of memory out of 5000000
- 34020 multiletter control sequences out of 15000+600000
+ 34132 multiletter control sequences out of 15000+600000
  563242 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,13n,79p,638b,461s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -918,9 +1083,9 @@ Chen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C
 :/Users/Patrick Chen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
 cm/cmtt10.pfb><C:/Users/Patrick Chen/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/symbols/msbm10.pfb>
-Output written on bochunc_hw4.pdf (27 pages, 7285792 bytes).
+Output written on bochunc_hw4.pdf (37 pages, 8102196 bytes).
 PDF statistics:
- 439 PDF objects out of 1000 (max. 8388607)
- 117 named destinations out of 1000 (max. 500000)
- 191 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 559 PDF objects out of 1000 (max. 8388607)
+ 151 named destinations out of 1000 (max. 500000)
+ 261 words of extra memory for PDF output out of 10000 (max. 10000000)
 

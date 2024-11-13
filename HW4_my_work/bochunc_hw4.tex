@@ -407,7 +407,7 @@
 	\newpage
 	\subsection*{Q4.2 at page 8\texttt{}}
 	Ans:\\
-	\hangindent=1.5em \hspace{1.5em}  The following \autoref{fig:Q42_cns} shows the code snippet:
+	\hangindent=1.5em \hspace{1.5em}The following \autoref{fig:Q42_cns} shows the code snippet:
 	\newline
 
 	\begin{minipage}{1\linewidth}
@@ -565,11 +565,209 @@
 
 	\newpage
 	
-	\subsection*{Q5 at page 8\texttt{}}
+	\subsection*{Q5.1.1 at page 8\texttt{}}
 	Ans:\\
-	\hangindent=1.5em \hspace{1.5em}Two 
+	\hangindent=1.5em \hspace{1.5em}The following \autoref{fig:Q51_cns} shows the code snippet of weight initializaing (lines 38-51), forward pass (lines 74-77), loss function calculation (line 81), and the backward pass (lines 84-88).
+	\newline
+	
+	\begin{minipage}{1\linewidth}
+		\centering
+		\hspace{0.12\linewidth} 
+		\includegraphics[width=0.8\linewidth]{./Q51_cns.png}  % Adjust the width to 50% of the line width
+		\refstepcounter{figure}  % Increment the figure counter
+		\newline
+		\textbf{Figure \thefigure:} Code Snippet % Manually add a caption/title
+		\label{fig:Q51_cns}  % Label for referencing
+	\end{minipage} 
+	
+	\newpage	
+	\subsection*{Q5.1.2 at page 9\texttt{}}
+	Ans:\\
+	\hangindent=1.5em \hspace{1.5em}The following \autoref{fig:Q52_cns} shows the code snippet of momentum gradient updating of the weights (lines 91-94).
+	\newline
+
+	\begin{minipage}{1\linewidth}
+		\centering
+		\hspace{0.12\linewidth} 
+		\includegraphics[width=1\linewidth]{./Q52_cns.png}  % Adjust the width to 50% of the line width
+		\refstepcounter{figure}  % Increment the figure counter
+		\newline
+		\textbf{Figure \thefigure:} Code Snippet % Manually add a caption/title
+		\label{fig:Q52_cns}  % Label for referencing
+	\end{minipage}	
+	
+	\newpage	
+	\subsection*{Q5.2 at page 9\texttt{}}
+	Ans:\\
+	\hangindent=1.5em \hspace{1.5em}The following \autoref{fig:Q52_res} shows the result after 100 epochs with learning rate set to $3e^{-5}$, batch size set to 36, hidden size set to 32. I observe that at the beginning 20 epochs, the loss drops drastically and quickly. However, as the epoch number increases, the loss drop becomes smoother and more flattened. Finally, at the last epoch number from 90 to 100, the loss tends to converge to some values range from 20 to 30.
+	\newline
+
+	\begin{minipage}{1\linewidth}
+	\centering
+	\hspace{0.12\linewidth} 
+	\includegraphics[width=1\linewidth]{./Q52_res.png}  % Adjust the width to 50% of the line width
+	\refstepcounter{figure}  % Increment the figure counter
+	\newline
+	\textbf{Figure \thefigure:} Average Loss vs Epoch % Manually add a caption/title
+	\label{fig:Q52_res}  % Label for referencing
+	\end{minipage}
+	
+	\newpage	
+	\subsection*{Q5.3.1 at page 9\texttt{}}
+	Ans:\\
+	\hangindent=1.5em \hspace{1.5em}The following \autoref{fig:Q53_res} shows the original validation images and their corresponding reconstruction images. The reconstructed images show similar shape and structure compared with their original images, but they are more blurred. I think it is because the Autoencoder with limited hidden units can only preserve some latent features of the original images, so as to reach the goal of compressed images, but would inevitably lose some information.
+	\newline
+
+\begin{minipage}{1\linewidth}
+	\centering
+	\hspace{0.12\linewidth} 
+	\includegraphics[width=0.8\linewidth]{./Q53_res.png}  % Adjust the width to 50% of the line width
+	\refstepcounter{figure}  % Increment the figure counter
+	\newline
+	\textbf{Figure \thefigure:} Validation Original Images and the Reconstruction Images % Manually add a caption/title
+	\label{fig:Q53_res}  % Label for referencing
+\end{minipage}	
+	
+	\newpage	
+	\subsection*{Q5.3.2 at page 9\texttt{}}
+	Ans:\\
+	\hangindent=1.5em \hspace{1.5em}The following \autoref{fig:Q54_res} shows the average PSNR result of the validation dataset, which is 15.2388. 
+	\newline
+
+\begin{minipage}{1\linewidth}
+	\centering
+	\hspace{0.12\linewidth} 
+	\includegraphics[width=0.8\linewidth]{./Q54_res.png}  % Adjust the width to 50% of the line width
+	\refstepcounter{figure}  % Increment the figure counter
+	\newline
+	\textbf{Figure \thefigure:} Average PSNR Result of Validation Dataset % Manually add a caption/title
+	\label{fig:Q54_res}  % Label for referencing
+\end{minipage}	
+
+	\newpage	
+	\subsection*{Q6.1.1 at page 10\texttt{}}
+	Ans:\\
+	\hangindent=1.5em \hspace{1.5em}The following \autoref{fig:Q6_1_res} shows the result of the 1-hidden-layer fully connected neural network written in Pytorch. The test accuracy is 83.28\% as printed on the standard output from the program: run\_q6\_1\_1.py. The following \autoref{fig:Q61_cns1} - \autoref{fig:Q61_cns3} shows the code snippet of the implementation in run\_q6\_1\_1.py
+	\newline
+	
+
+\begin{minipage}{1\linewidth}
+	\centering
+	\hspace{0.12\linewidth} 
+	\includegraphics[width=0.8\linewidth]{./Q6_1_res.png}  % Adjust the width to 50% of the line width
+	\refstepcounter{figure}  % Increment the figure counter
+	\newline
+	\textbf{Figure \thefigure:} Loss and Accuracy Over Epoch on Training and Validation Dataset % Manually add a caption/title
+	\label{fig:Q6_1_res}  % Label for referencing
+\end{minipage}
+\newline
+\newline
 
 
+\begin{minipage}{0.48\linewidth}
+	\centering
+	\includegraphics[width=\linewidth]{./Q6_1_cns1.png}
+	\refstepcounter{figure}  % Increment the figure counter
+	\textbf{Figure \ref{fig:Q61_cns1}:} Code Snippet1 of Q6.1.1 % Manually add a caption/title
+	\label{fig:Q61_cns1}         % Label for referencing	
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+	\centering
+	\includegraphics[width=\linewidth]{./Q6_1_cns2.png}
+	\refstepcounter{figure}  % Increment the figure counter
+	\textbf{Figure \ref{fig:Q61_cns2}:} Code Snippet2 of Q6.1.1  % Manually add a caption/title
+	\label{fig:Q61_cns2}         % Label for referencing
+\end{minipage}	
+
+\begin{minipage}{1\linewidth}
+	\centering
+	\hspace{0.12\linewidth} 
+	\includegraphics[width=0.9\linewidth]{./Q6_1_cns3.png}  % Adjust the width to 50% of the line width
+	\refstepcounter{figure}  % Increment the figure counter
+	\newline
+	\textbf{Figure \thefigure:} Code Snippet3 of Q6.1.1 % Manually add a caption/title
+	\label{fig:Q61_cns3}  % Label for referencing
+\end{minipage}
+
+	\newpage	
+	\subsection*{Q6.1.2 at page 10\texttt{}}
+	Ans:\\
+	\hangindent=1.5em \hspace{1.5em}The following \autoref{fig:Q6_1_2_res} shows the result of the convolutional neural network (CNN) written in Pytorch. The test accuracy is 93.56\% as printed on the standard output from the program: run\_q6\_1\_2.py. We can see from the result that CNN has higher test accuracy and less overfitting compared with the previous 1-hidden-layer fully-connected network. The following \autoref{fig:Q6_1_2_cns} shows the code snippet of the implementation of CNN in run\_q6\_1\_2.py 
+	\newline
+	
+\begin{minipage}{1\linewidth}
+	\centering
+	\hspace{0.12\linewidth} 
+	\includegraphics[width=1\linewidth]{./Q6_1_2_res.png}  % Adjust the width to 50% of the line width
+	\refstepcounter{figure}  % Increment the figure counter
+	\newline
+	\textbf{Figure \thefigure:} Loss and Accuracy Over Epoch on Training and Validation Dataset % Manually add a caption/title
+	\label{fig:Q6_1_2_res}  % Label for referencing
+\end{minipage}
+\newline
+
+\begin{minipage}{1\linewidth}
+	\centering
+	\hspace{0.12\linewidth} 
+	\includegraphics[width=0.7\linewidth]{./Q6_1_2_cns.png}  % Adjust the width to 50% of the line width
+	\refstepcounter{figure}  % Increment the figure counter
+	\newline
+	\textbf{Figure \thefigure:} Code Snippet of CNN % Manually add a caption/title
+	\label{fig:Q6_1_2_cns}  % Label for referencing
+\end{minipage}
+\newline
+
+	\newpage	
+	\subsection*{Q6.1.3 at page 10\texttt{}}
+	Ans:\\
+	\hangindent=1.5em \hspace{1.5em}The following \autoref{fig:Q6_1_3_res} shows the result of the same convolutional neural network (CNN) in previous problem running on CIFAR-10 dataset. The test accuracy is 79.28\% as printed on the standard output from the program: run\_q6\_1\_3.py. The result shows that under same configuration and parameter setting method, the accuracy is lower and the overfitting is more severe, indicating CIFAR-10 dataset is more complex and versatile than NIST36 dataset.
+	\newline
+
+\begin{minipage}{1\linewidth}
+	\centering
+	\hspace{0.12\linewidth} 
+	\includegraphics[width=1\linewidth]{./Q6_1_3_res.png}  % Adjust the width to 50% of the line width
+	\refstepcounter{figure}  % Increment the figure counter
+	\newline
+	\textbf{Figure \thefigure:} Loss and Accuracy Over Epoch on Training and Validation Dataset % Manually add a caption/title
+	\label{fig:Q6_1_3_res}  % Label for referencing
+\end{minipage}
+\newline
+
+
+	\newpage	
+	\subsection*{Q6.2 at page 10\texttt{}}
+	Ans:\\
+	\hangindent=1.5em \hspace{1.5em}The following \autoref{fig:Q6_2_ft} shows the result of fine-tune of SqueezeNet1\_1 with replacing last classifier layer with a Convolution Layer that has kernel size = (1, 1), stride = 1, and output channel = 17 (number of class). With learning rate $2e^{-3}$, batch size = 32, and epochs = 100, the test accuracy is 87.06\% on flower17 dataset as the output of running run\_q6\_2.finetune.py.
+	\newline
+	
+\begin{minipage}{1\linewidth}
+	\centering
+	\hspace{0.12\linewidth} 
+	\includegraphics[width=1\linewidth]{./Q6_2_ft.png}  % Adjust the width to 50% of the line width
+	\refstepcounter{figure}  % Increment the figure counter
+	\newline
+	\textbf{Figure \thefigure:} Loss and Accuracy Over Epoch with Fine-tune on SqueezeNet1\_1 % Manually add a caption/title
+	\label{fig:Q6_2_ft}  % Label for referencing
+\end{minipage}
+\newline	
+
+	\hangindent=1.5em \hspace{1.5em}The following \autoref{fig:Q6_2_or} shows the result of my own CNN architecture used in Q6.1.2 and Q6.1.3. With learning rate $1e^{-5}$, batch size = 32, and epochs = 100, the test accuracy is 44.12\% on flower17 dataset as the output of running run\_q6\_2.orig.py.
+\newline
+
+\begin{minipage}{1\linewidth}
+	\centering
+	\hspace{0.12\linewidth} 
+	\includegraphics[width=1\linewidth]{./Q6_2_or.png}  % Adjust the width to 50% of the line width
+	\refstepcounter{figure}  % Increment the figure counter
+	\newline
+	\textbf{Figure \thefigure:} Loss and Accuracy Over Epoch with Fine-tune on My Own CNN % Manually add a caption/title
+	\label{fig:Q6_2_or}  % Label for referencing
+\end{minipage}
+\newline
+
+	\hangindent=1.5em \hspace{1.5em}It is obvious that the SeueezeNet1\_1 with fine-tuned classifier has performance much better than my own CNN architecture, indicating the my CNN model is too simple for the complex flower17 dataset. Besides, the fine-tuned SqueezeNet1\_1 converges much more faster than my model, using only 20 epochs to get the final performance. However, it seems that my own CNN model has smaller overfitting than the fine-tuned SqueezeNet1\_1, as the gap between validation loss and training loss is smaller.
 
 	\newpage
 	\subsection*{Collaborations}
@@ -577,11 +775,13 @@
 	\hangindent=0.4em \hspace{0.3em} Though I do not have collaborators, I found the following websites helpful on understanding the concepts in this homework.
 	\begin{enumerate}
 		\item \url{https://www.ri.cmu.edu/pub_files/pub3/baker_simon_2003_3/baker_simon_2003_3.pdf.}
-		\item \url{http://16385.courses.cs.cmu.edu/spring2024/lecture/track}
-		\item \url{https://stats.stackexchange.com/questions/559575/how-does-addition-of-a-regularization-term-ensures-that-the-matrix-is-nonsingula}
-		\item \url{https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html}
-		\item \url{https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imsave.html}
-		\item \url{https://docs.opencv.org/4.x/d4/d61/tutorial_warp_affine.html}		
+		\item \url{https://pytorch.org/tutorials/beginner/pytorch_with_examples.html}
+		\item \url{https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imsave.html}	
+		\item \url{https://www.geeksforgeeks.org/how-to-load-cifar10-dataset-in-pytorch/}	
+		\item \url{https://www.geeksforgeeks.org/how-do-you-use-pytorchs-dataset-and-dataloader-classes-for-custom-data/}
+		\item \url{https://github.com/facebookarchive/fb.resnet.torch/issues/180}
+		\item \url{https://pytorch.org/tutorials/beginner/data_loading_tutorial.html#afterword-torchvision}
+		\item \url{https://www.kaggle.com/code/satriasyahputra/flowers-17}
 	\end{enumerate}
 
 \end{document}

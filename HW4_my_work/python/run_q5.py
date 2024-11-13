@@ -15,8 +15,11 @@ valid_x = valid_data['valid_data']
 
 max_iters = 100
 # pick a batch size, learning rate
-batch_size = 36 
+batch_size = 36
+#batch_size = 18
+#batch_size = 96
 learning_rate =  3e-5
+#learning_rate =  3e-7
 hidden_size = 32
 lr_rate = 20
 batches = get_random_batches(train_x,np.ones((train_x.shape[0],1)),batch_size)
@@ -29,9 +32,28 @@ params = Counter()
 ##########################
 ##### your code here #####
 ##########################
+# Initialize weights
+n_inst, x_dimension = train_x.shape
+n_inst_val, x_dimension_val = valid_x.shape
+initialize_weights(x_dimension, hidden_size, params, "layer1")
+initialize_weights(hidden_size, hidden_size, params, "layer2")
+initialize_weights(hidden_size, hidden_size, params, "layer3")
+initialize_weights(hidden_size, x_dimension, params, "output")
+assert x_dimension == x_dimension_val
+
+# Initialize momentum terms
+upd_parameters_name = []
+grad_parameters_name = []
+momentum_params = Counter()
+for key in params.keys():
+    momentum_params[f'm_{key}'] = np.zeros_like(params[key])
+    upd_parameters_name.append(key)
+    grad_parameters_name.append('grad_'+key)
+
 
 # should look like your previous training loops
 losses = []
+valid_losses = []
 for itr in range(max_iters):
     total_loss = 0
     for xb,_ in batches:
@@ -49,13 +71,36 @@ for itr in range(max_iters):
         ##########################
 
         # forward pass
+        h1_out = forward(xb    , params, 'layer1', relu)
+        h2_out = forward(h1_out, params, 'layer2', relu)
+        h3_out = forward(h2_out, params, 'layer3', relu)
+        y_hat  = forward(h3_out, params, 'output', sigmoid)
+
 
         # loss
+        total_loss += np.sum(np.power((y_hat - xb), 2))
 
         # backward
+        grad_y_hat = 2*(y_hat -xb)
+        delta3 = backwards(grad_y_hat, params, "output", sigmoid_deriv)
+        delta2 = backwards(delta3    , params, "layer3", relu_deriv)
+        delta1 = backwards(delta2    , params, "layer2", relu_deriv)
+        _      = backwards(delta1    , params, "layer1", relu_deriv)
 
         # apply gradient, remember to update momentum as well
-        
+        for param_name, grad in zip(upd_parameters_name, [params[grad_parameters_name[i]] for i in range(len(grad_parameters_name))]):
+            # Momentum update rule
+            momentum_params[f'm_{param_name}'] = 0.9 * momentum_params[f'm_{param_name}'] - learning_rate * grad
+            params[param_name] += momentum_params[f'm_{param_name}']
+
+    '''
+    h1_out_val = forward(valid_x   , params, 'layer1', relu)
+    h2_out_val = forward(h1_out_val, params, 'layer2', relu)
+    h3_out_val = forward(h2_out_val, params, 'layer3', relu)
+    y_hat_val  = forward(h3_out_val, params, 'output', sigmoid)
+    valid_loss = np.sum(np.power((y_hat_val - valid_x), 2))
+    valid_losses.append(valid_loss / n_inst_val)
+    '''
     
     losses.append(total_loss/train_x.shape[0])
     if itr % 2 == 0:
@@ -64,11 +109,14 @@ for itr in range(max_iters):
         learning_rate *= 0.9
 
 # plot loss curve
-plt.plot(range(len(losses)), losses)
+plt.plot(range(len(losses)), losses, 'r', label='Training Loss')  # Training loss in red
+#plt.plot(range(len(valid_losses)), valid_losses, 'y', label='Validation Loss')  # Validation loss in blue
 plt.xlabel("epoch")
 plt.ylabel("average loss")
-plt.xlim(0, len(losses)-1)
+#plt.xlim(0, len(losses)-1)
+plt.xlim(0, max(len(losses), len(valid_losses)) - 1)
 plt.ylim(0, None)
+plt.legend()  # Display legend to show color meaning
 plt.grid()
 plt.show()
 
@@ -89,8 +137,11 @@ for i, label in enumerate(visualize_labels):
 ##########################
 ##### your code here #####
 ##########################
-
-
+# Forward Passing
+h1_out = forward(visualize_x, params, 'layer1', relu)
+h2_out = forward(h1_out     , params, 'layer2', relu)
+h3_out = forward(h2_out     , params, 'layer3', relu)
+reconstructed_x  = forward(h3_out     , params, 'output', sigmoid)
 
 # visualize
 fig = plt.figure()
@@ -111,3 +162,16 @@ from skimage.metrics import peak_signal_noise_ratio
 ##########################
 ##### your code here #####
 ##########################
+h1_out = forward(valid_x    , params, 'layer1', relu)
+h2_out = forward(h1_out     , params, 'layer2', relu)
+h3_out = forward(h2_out     , params, 'layer3', relu)
+recon_val_x  = forward(h3_out     , params, 'output', sigmoid)
+
+psnr_values = []
+for original, reconstructed in zip(valid_x, recon_val_x):
+    psnr = peak_signal_noise_ratio(original, reconstructed, data_range=original.max() - original.min())
+    psnr_values.append(psnr)
+
+# Calculate the average PSNR across all validation images
+average_psnr = np.mean(psnr_values)
+print(f"Average PSNR: {average_psnr}")
