@@ -6,7 +6,10 @@
 import numpy as np
 from matplotlib import pyplot as plt
 from skimage.color import rgb2xyz
-from utils import plotSurface
+from utils import plotSurface, integrateFrankot
+
+from skimage import io
+import scipy.io
 
 
 def renderNDotLSphere(center, rad, light, pxSize, res):
@@ -103,6 +106,24 @@ def loadData(path="../data/"):
     L = None
     s = None
     # Your code here
+    I = []
+
+    # Load images and convert to luminance channel
+    for n in range(1, 8):
+        image = io.imread(f"{path}/input_{n}.tif").astype(np.uint16)
+        assert image.dtype == np.uint16
+
+        xyz_image = rgb2xyz(image)
+        luminance = xyz_image[:, :, 1]  # Extract Y channel (luminance)
+        #luminance = (luminance*65535).astype(np.uint16)
+        if s is None:
+            s = luminance.shape
+        I.append(luminance.flatten())
+    I = np.array(I)
+
+    # Load the sources file
+    L = np.load(f"{path}/sources.npy").T
+
     return I, L, s
 
 
@@ -127,7 +148,7 @@ def estimatePseudonormalsCalibrated(I, L):
         The 3 x P matrix of pesudonormals
     """
 
-    B = None
+    B = np.linalg.inv(L@L.T)@(L@I)
     # Your code here
     return B
 
@@ -151,9 +172,10 @@ def estimateAlbedosNormals(B):
     normals : numpy.ndarray
         The 3 x P matrix of normals
     """
+    eps = 1e-6
 
-    albedos = None
-    normals = None
+    albedos = np.linalg.norm(B, axis=0) # (P,)
+    normals = B/(albedos+eps) #eps: avoid dividing by zero
     # Your code here
     return albedos, normals
 
@@ -188,8 +210,9 @@ def displayAlbedosNormals(albedos, normals, s):
 
     """
 
-    albedoIm = None
-    normalIm = None
+    albedoIm = albedos.reshape(s)
+    normalIm = normals.T.reshape((s[0], s[1], 3)) #(3, P) -> (P, 3) -> (h, w, 3)
+    normalIm = (normalIm + 1.0)/2.0 # from value range [-1, 1] to [0, 1]
     # Your code here
     return albedoIm, normalIm
 
@@ -218,11 +241,23 @@ def estimateShape(normals, s):
 
     surface = None
     # Your code here
+    # Reshape normals into the image shape
+    n1 = normals[0, :].reshape(s)  # X-component of normals, (h, w, 1)
+    n2 = normals[1, :].reshape(s)  # Y-component of normals, (h, w, 1)
+    n3 = normals[2, :].reshape(s)  # Z-component of normals, (h, w, 1)
+
+    # Compute gradients f_x and f_y
+    fx = -n1 / n3
+    fy = -n2 / n3
+
+    # Use utils.integrateFrankot for integration
+    surface = integrateFrankot(fx, fy)    
     return surface
 
 
 if __name__ == "__main__":
     # Part 1(b)
+    '''
     radius = 0.75  # cm
     center = np.asarray([0, 0, 0])  # cm
     pxSize = 7  # um
@@ -245,17 +280,36 @@ if __name__ == "__main__":
     plt.figure()
     plt.imshow(image, cmap="gray")
     plt.imsave("1b-c.png", image, cmap="gray")
-
     '''
+
 
     # Part 1(c)
     I, L, s = loadData("../data/")
+    #print(f"I.shape = {I.shape}")
+    #print(f"s = {s}")
+    
+    '''
+    # test code
+    print(f"L = {L}")
+    print(f"I[0].dtype = {I[0].dtype}")
+
+    num_images = I.shape[0]
+    for i in range(num_images):
+        image = I[i].reshape(s)  # Reshape to original shape
+        plt.imshow(image, cmap='gray')
+        plt.title(f"Image {i+1}")
+        plt.axis('off')
+        plt.show()
+    '''
 
     # Part 1(d)
     # Your code here
+    u_vec, singular, vt_vec = np.linalg.svd(I, full_matrices=False)
+    print("Singular Values of I:", singular)
 
     # Part 1(e)
     B = estimatePseudonormalsCalibrated(I, L)
+    #print(f"B.shape = {B.shape}")
 
     # Part 1(f)
     albedos, normals = estimateAlbedosNormals(B)
@@ -266,4 +320,3 @@ if __name__ == "__main__":
     # Part 1(i)
     surface = estimateShape(normals, s)
     plotSurface(surface)
-    '''
