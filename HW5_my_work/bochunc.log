@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.5)  13 NOV 2024 16:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.5)  20 NOV 2024 20:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -386,46 +386,54 @@ Package caption Info: Standard document class detected.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 )
+(C:\Users\Patrick Chen\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcapti
+on.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count291
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count292
+)
 (C:\Users\Patrick Chen\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3back
 end-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count291
+\l__color_backend_stack_int=\count293
 \l__pdf_internal_box=\box55
 ) (bochunc.aux)
 \openout1 = `bochunc.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
 
 (C:\Users\Patrick Chen\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp
 -pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count292
+\scratchcounter=\count294
 \scratchdimen=\dimen172
 \scratchbox=\box56
-\nofMPsegments=\count293
-\nofMParguments=\count294
+\nofMPsegments=\count295
+\nofMParguments=\count296
 \everyMPshowfont=\toks35
-\MPscratchCnt=\count295
+\MPscratchCnt=\count297
 \MPscratchDim=\dimen173
-\MPnumerator=\count296
-\makeMPintoPDFobject=\count297
+\MPnumerator=\count298
+\makeMPintoPDFobject=\count299
 \everyMPtoPDFconversion=\toks36
 )
 (C:\Users\Patrick Chen\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\eps
@@ -472,7 +480,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 21.
+Package hyperref Info: Link coloring OFF on input line 22.
 (bochunc.out) (bochunc.out)
 \@outlinefile=\write3
 \openout3 = `bochunc.out'.
@@ -482,19 +490,19 @@ Package caption Info: End \AtBeginDocument code.
  [1
 
 {C:/Users/Patrick Chen/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 40
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 41
 .
 
 (C:\Users\Patrick Chen\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 41.
 
 
 (C:\Users\Patrick Chen\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 41.
 
 
 (C:\Users\Patrick Chen\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -503,20 +511,20 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <./Q1_a.png, id=10, 302.63063pt x 240.9pt>
 File: ./Q1_a.png Graphic file (type png)
 <use ./Q1_a.png>
-Package pdftex.def Info: ./Q1_a.png  used on input line 52.
+Package pdftex.def Info: ./Q1_a.png  used on input line 53.
 (pdftex.def)             Requested size: 225.48038pt x 179.48724pt.
 <./Q1_b.png, id=12, 285.31593pt x 234.8775pt>
 File: ./Q1_b.png Graphic file (type png)
 <use ./Q1_b.png>
-Package pdftex.def Info: ./Q1_b.png  used on input line 60.
+Package pdftex.def Info: ./Q1_b.png  used on input line 61.
 (pdftex.def)             Requested size: 225.48038pt x 185.61928pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--66
+Underfull \hbox (badness 10000) in paragraph at lines 51--67
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--76
+Underfull \hbox (badness 10000) in paragraph at lines 74--77
 
  []
 
@@ -525,61 +533,487 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.79 	\newpage
+l.80 	\newpage
                [1 <./Q1_a.png> <./Q1_b.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 83--86
+Underfull \hbox (badness 10000) in paragraph at lines 84--87
 
  []
 
 <./src/1b-a.png, id=35, 2775.168pt x 1561.032pt>
 File: ./src/1b-a.png Graphic file (type png)
 <use ./src/1b-a.png>
-Package pdftex.def Info: ./src/1b-a.png  used on input line 89.
+Package pdftex.def Info: ./src/1b-a.png  used on input line 90.
 (pdftex.def)             Requested size: 145.6229pt x 81.89108pt.
 <./src/1b-b.png, id=36, 2775.168pt x 1561.032pt>
 File: ./src/1b-b.png Graphic file (type png)
 <use ./src/1b-b.png>
-Package pdftex.def Info: ./src/1b-b.png  used on input line 97.
+Package pdftex.def Info: ./src/1b-b.png  used on input line 98.
 (pdftex.def)             Requested size: 145.6229pt x 81.89108pt.
 <./src/1b-c.png, id=37, 2775.168pt x 1561.032pt>
 File: ./src/1b-c.png Graphic file (type png)
 <use ./src/1b-c.png>
-Package pdftex.def Info: ./src/1b-c.png  used on input line 105.
+Package pdftex.def Info: ./src/1b-c.png  used on input line 106.
 (pdftex.def)             Requested size: 145.6229pt x 81.89108pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--112
+Underfull \hbox (badness 10000) in paragraph at lines 88--113
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--112
+Underfull \hbox (badness 10000) in paragraph at lines 88--113
 
  []
 
 <./Q1_b_cns.png, id=38, 388.8126pt x 688.7331pt>
 File: ./Q1_b_cns.png Graphic file (type png)
 <use ./Q1_b_cns.png>
-Package pdftex.def Info: ./Q1_b_cns.png  used on input line 115.
+Package pdftex.def Info: ./Q1_b_cns.png  used on input line 116.
 (pdftex.def)             Requested size: 328.84888pt x 446.27348pt.
 [2 <./src/1b-a.png> <./src/1b-b.png> <./src/1b-c.png> <./Q1_b_cns.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 123--126
+Underfull \hbox (badness 10000) in paragraph at lines 124--127
 
  []
 
-[3]
-Overfull \hbox (90.99042pt too wide) in paragraph at lines 137--138
-[][]$\OT1/cmtt/m/n/10 https : / / www . geeksforgeeks . org / how-[]do-[]you-[]
-use-[]pytorchs-[]dataset-[]and-[]dataloader-[]classes-[]for-[]custom-[]data/$[]
- 
+<./Q1_c_cns.png, id=53, 460.72125pt x 697.10437pt>
+File: ./Q1_c_cns.png Graphic file (type png)
+<use ./Q1_c_cns.png>
+Package pdftex.def Info: ./Q1_c_cns.png  used on input line 130.
+(pdftex.def)             Requested size: 328.82268pt x 446.26228pt.
+[3 <./Q1_c_cns.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 138--142
+
+ []
+
+<./Q1_d_res.png, id=63, 516.42938pt x 26.34843pt>
+File: ./Q1_d_res.png Graphic file (type png)
+<use ./Q1_d_res.png>
+Package pdftex.def Info: ./Q1_d_res.png  used on input line 145.
+(pdftex.def)             Requested size: 516.42812pt x 26.34836pt.
+
+Overfull \hbox (46.67313pt too wide) in paragraph at lines 145--146
+ [][] 
  []
 
 
-Overfull \hbox (12.49106pt too wide) in paragraph at lines 139--140
-[][]$\OT1/cmtt/m/n/10 https : / / pytorch . org / tutorials / beginner / data _
- loading _ tutorial . html # afterword-[]torchvision$[] 
+Underfull \hbox (badness 10000) in paragraph at lines 143--152
+
  []
 
-[4] (bochunc.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--152
+
+ []
+
+<./Q1_d_cns.png, id=64, 627.84563pt x 100.12407pt>
+File: ./Q1_d_cns.png Graphic file (type png)
+<use ./Q1_d_cns.png>
+Package pdftex.def Info: ./Q1_d_cns.png  used on input line 155.
+(pdftex.def)             Requested size: 375.80542pt x 59.92975pt.
+[4 <./Q1_d_res.png> <./Q1_d_cns.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 171--174
+
+ []
+
+<./Q1_e_cns.png, id=76, 534.49687pt x 408.77719pt>
+File: ./Q1_e_cns.png Graphic file (type png)
+<use ./Q1_e_cns.png>
+Package pdftex.def Info: ./Q1_e_cns.png  used on input line 177.
+(pdftex.def)             Requested size: 234.87758pt x 187.90256pt.
+[5 <./Q1_e_cns.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 185--188
+
+ []
+
+<./src/1f-a.png, id=95, 266.6763pt x 311.4837pt>
+File: ./src/1f-a.png Graphic file (type png)
+<use ./src/1f-a.png>
+Package pdftex.def Info: ./src/1f-a.png  used on input line 191.
+(pdftex.def)             Requested size: 225.48038pt x 263.36505pt.
+<./src/1f-b.png, id=96, 266.6763pt x 311.4837pt>
+File: ./src/1f-b.png Graphic file (type png)
+<use ./src/1f-b.png>
+Package pdftex.def Info: ./src/1f-b.png  used on input line 199.
+(pdftex.def)             Requested size: 225.48038pt x 263.36505pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--206
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--206
+
+ []
+
+<./Q1_f_cns1.png, id=97, 640.64343pt x 508.14844pt>
+File: ./Q1_f_cns1.png Graphic file (type png)
+<use ./Q1_f_cns1.png>
+Package pdftex.def Info: ./Q1_f_cns1.png  used on input line 209.
+(pdftex.def)             Requested size: 225.48038pt x 178.84708pt.
+<./Q1_f_cns2.png, id=98, 611.28375pt x 588.69937pt>
+File: ./Q1_f_cns2.png Graphic file (type png)
+<use ./Q1_f_cns2.png>
+Package pdftex.def Info: ./Q1_f_cns2.png  used on input line 217.
+(pdftex.def)             Requested size: 225.48038pt x 217.14163pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--223
+
+ []
+
+[6 <./src/1f-a.png> <./src/1f-b.png>] [7 <./Q1_f_cns1.png> <./Q1_f_cns2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 226--228
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--235
+
+ []
+
+[8] [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 358--361
+
+ []
+
+<./Q1_i_cns.png, id=144, 548.80031pt x 610.53094pt>
+File: ./Q1_i_cns.png Graphic file (type png)
+<use ./Q1_i_cns.png>
+Package pdftex.def Info: ./Q1_i_cns.png  used on input line 364.
+(pdftex.def)             Requested size: 469.76506pt x 469.7749pt.
+<./Q1_i_res1.png, id=145, 852.93657pt x 815.29594pt>
+File: ./Q1_i_res1.png Graphic file (type png)
+<use ./Q1_i_res1.png>
+Package pdftex.def Info: ./Q1_i_res1.png  used on input line 372.
+(pdftex.def)             Requested size: 375.81384pt x 281.84966pt.
+[11 <./Q1_i_cns.png>]
+<./Q1_i_res2.png, id=155, 942.52126pt x 677.53125pt>
+File: ./Q1_i_res2.png Graphic file (type png)
+<use ./Q1_i_res2.png>
+Package pdftex.def Info: ./Q1_i_res2.png  used on input line 380.
+(pdftex.def)             Requested size: 375.80815pt x 281.86288pt.
+<./Q1_i_res3.png, id=156, 937.25156pt x 737.00343pt>
+File: ./Q1_i_res3.png Graphic file (type png)
+<use ./Q1_i_res3.png>
+Package pdftex.def Info: ./Q1_i_res3.png  used on input line 388.
+(pdftex.def)             Requested size: 375.80927pt x 281.85228pt.
+ [12 <./Q1_i_res1.png> <./Q1_i_res2.png>] [13 <./Q1_i_res3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 396--398
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 416--419
+
+ []
+
+<./src/2b-a.png, id=183, 266.6763pt x 311.4837pt>
+File: ./src/2b-a.png Graphic file (type png)
+<use ./src/2b-a.png>
+Package pdftex.def Info: ./src/2b-a.png  used on input line 422.
+(pdftex.def)             Requested size: 225.48038pt x 263.36505pt.
+<./src/2b-b.png, id=184, 266.6763pt x 311.4837pt>
+File: ./src/2b-b.png Graphic file (type png)
+<use ./src/2b-b.png>
+Package pdftex.def Info: ./src/2b-b.png  used on input line 430.
+(pdftex.def)             Requested size: 225.48038pt x 263.36505pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 420--437
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 420--437
+
+ []
+
+<./Q2_b_cns1.png, id=185, 536.75531pt x 526.96875pt>
+File: ./Q2_b_cns1.png Graphic file (type png)
+<use ./Q2_b_cns1.png>
+Package pdftex.def Info: ./Q2_b_cns1.png  used on input line 440.
+(pdftex.def)             Requested size: 225.48038pt x 221.36555pt.
+<./Q2_b_cns2.png, id=186, 542.025pt x 437.38406pt>
+File: ./Q2_b_cns2.png Graphic file (type png)
+<use ./Q2_b_cns2.png>
+Package pdftex.def Info: ./Q2_b_cns2.png  used on input line 448.
+(pdftex.def)             Requested size: 225.48038pt x 181.95148pt.
+[15 <./src/2b-a.png> <./src/2b-b.png> <./Q2_b_cns1.png> <./Q2_b_cns2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 456--459
+
+ []
+
+<./Q2_c_comp_res.png, id=201, 481.8pt x 143.03438pt>
+File: ./Q2_c_comp_res.png Graphic file (type png)
+<use ./Q2_c_comp_res.png>
+Package pdftex.def Info: ./Q2_c_comp_res.png  used on input line 462.
+(pdftex.def)             Requested size: 375.81718pt x 140.93005pt.
+[16 <./Q2_c_comp_res.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 470--473
+
+ []
+
+<./Q2_d_res1.png, id=211, 991.45406pt x 893.58844pt>
+File: ./Q2_d_res1.png Graphic file (type png)
+<use ./Q2_d_res1.png>
+Package pdftex.def Info: ./Q2_d_res1.png  used on input line 476.
+(pdftex.def)             Requested size: 225.48038pt x 203.21669pt.
+<./Q2_d_res2.png, id=212, 931.22906pt x 557.08125pt>
+File: ./Q2_d_res2.png Graphic file (type png)
+<use ./Q2_d_res2.png>
+Package pdftex.def Info: ./Q2_d_res2.png  used on input line 484.
+(pdftex.def)             Requested size: 225.48038pt x 134.88377pt.
+[17 <./Q2_d_res1.png> <./Q2_d_res2.png>]
+<./Q2_e_res1.png, id=224, 1086.30844pt x 810.02625pt>
+File: ./Q2_e_res1.png Graphic file (type png)
+<use ./Q2_e_res1.png>
+Package pdftex.def Info: ./Q2_e_res1.png  used on input line 498.
+(pdftex.def)             Requested size: 375.80452pt x 281.8572pt.
+<./Q2_e_res2.png, id=225, 985.43156pt x 761.09344pt>
+File: ./Q2_e_res2.png Graphic file (type png)
+<use ./Q2_e_res2.png>
+Package pdftex.def Info: ./Q2_e_res2.png  used on input line 506.
+(pdftex.def)             Requested size: 375.80614pt x 281.85567pt.
+ [18 <./Q2_e_res1.png>]
+<./Q2_e_res3.png, id=235, 910.90312pt x 795.72281pt>
+File: ./Q2_e_res3.png Graphic file (type png)
+<use ./Q2_e_res3.png>
+Package pdftex.def Info: ./Q2_e_res3.png  used on input line 514.
+(pdftex.def)             Requested size: 375.80777pt x 281.84613pt.
+ [19 <./Q2_e_res2.png> <./Q2_e_res3.png>]
+<./src/2f_mu_change/faceCalibrated_mu_-0.1_v_1_lambda_1.png, id=243, 462.528pt 
+x 346.896pt>
+File: ./src/2f_mu_change/faceCalibrated_mu_-0.1_v_1_lambda_1.png Graphic file (
+type png)
+<use ./src/2f_mu_change/faceCalibrated_mu_-0.1_v_1_lambda_1.png>
+Package pdftex.def Info: ./src/2f_mu_change/faceCalibrated_mu_-0.1_v_1_lambda_1
+.png  used on input line 530.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+<./src/2f_mu_change/faceCalibrated_mu_-1_v_1_lambda_1.png, id=244, 462.528pt x 
+346.896pt>
+File: ./src/2f_mu_change/faceCalibrated_mu_-1_v_1_lambda_1.png Graphic file (ty
+pe png)
+<use ./src/2f_mu_change/faceCalibrated_mu_-1_v_1_lambda_1.png>
+Package pdftex.def Info: ./src/2f_mu_change/faceCalibrated_mu_-1_v_1_lambda_1.p
+ng  used on input line 537.
+(pdftex.def)             Requested size: 150.32503pt x 112.74515pt.
+<./src/2f_mu_change/faceCalibrated_mu_-10_v_1_lambda_1.png, id=245, 462.528pt x
+ 346.896pt>
+File: ./src/2f_mu_change/faceCalibrated_mu_-10_v_1_lambda_1.png Graphic file (t
+ype png)
+<use ./src/2f_mu_change/faceCalibrated_mu_-10_v_1_lambda_1.png>
+Package pdftex.def Info: ./src/2f_mu_change/faceCalibrated_mu_-10_v_1_lambda_1.
+png  used on input line 544.
+(pdftex.def)             Requested size: 150.32503pt x 112.74515pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 522--550
+
+ []
+
+<./src/2f_mu_change/faceCalibrated_mu_0.1_v_1_lambda_1.png, id=246, 462.528pt x
+ 346.896pt>
+File: ./src/2f_mu_change/faceCalibrated_mu_0.1_v_1_lambda_1.png Graphic file (t
+ype png)
+<use ./src/2f_mu_change/faceCalibrated_mu_0.1_v_1_lambda_1.png>
+Package pdftex.def Info: ./src/2f_mu_change/faceCalibrated_mu_0.1_v_1_lambda_1.
+png  used on input line 558.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+<./src/2f_mu_change/faceCalibrated_mu_1_v_1_lambda_1.png, id=247, 462.528pt x 3
+46.896pt>
+File: ./src/2f_mu_change/faceCalibrated_mu_1_v_1_lambda_1.png Graphic file (typ
+e png)
+<use ./src/2f_mu_change/faceCalibrated_mu_1_v_1_lambda_1.png>
+Package pdftex.def Info: ./src/2f_mu_change/faceCalibrated_mu_1_v_1_lambda_1.pn
+g  used on input line 565.
+(pdftex.def)             Requested size: 150.32503pt x 112.74515pt.
+<./src/2f_mu_change/faceCalibrated_mu_10_v_1_lambda_1.png, id=248, 462.528pt x 
+346.896pt>
+File: ./src/2f_mu_change/faceCalibrated_mu_10_v_1_lambda_1.png Graphic file (ty
+pe png)
+<use ./src/2f_mu_change/faceCalibrated_mu_10_v_1_lambda_1.png>
+Package pdftex.def Info: ./src/2f_mu_change/faceCalibrated_mu_10_v_1_lambda_1.p
+ng  used on input line 572.
+(pdftex.def)             Requested size: 150.32503pt x 112.74515pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 552--578
+
+ []
+
+<./src/2f_v_change/faceCalibrated_mu_1_v_-0.1_lambda_1.png, id=249, 462.528pt x
+ 346.896pt>
+File: ./src/2f_v_change/faceCalibrated_mu_1_v_-0.1_lambda_1.png Graphic file (t
+ype png)
+<use ./src/2f_v_change/faceCalibrated_mu_1_v_-0.1_lambda_1.png>
+Package pdftex.def Info: ./src/2f_v_change/faceCalibrated_mu_1_v_-0.1_lambda_1.
+png  used on input line 586.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+<./src/2f_v_change/faceCalibrated_mu_1_v_-1_lambda_1.png, id=250, 462.528pt x 3
+46.896pt>
+File: ./src/2f_v_change/faceCalibrated_mu_1_v_-1_lambda_1.png Graphic file (typ
+e png)
+<use ./src/2f_v_change/faceCalibrated_mu_1_v_-1_lambda_1.png>
+Package pdftex.def Info: ./src/2f_v_change/faceCalibrated_mu_1_v_-1_lambda_1.pn
+g  used on input line 593.
+(pdftex.def)             Requested size: 150.32503pt x 112.74515pt.
+<./src/2f_v_change/faceCalibrated_mu_1_v_-10_lambda_1.png, id=251, 462.528pt x 
+346.896pt>
+File: ./src/2f_v_change/faceCalibrated_mu_1_v_-10_lambda_1.png Graphic file (ty
+pe png)
+<use ./src/2f_v_change/faceCalibrated_mu_1_v_-10_lambda_1.png>
+Package pdftex.def Info: ./src/2f_v_change/faceCalibrated_mu_1_v_-10_lambda_1.p
+ng  used on input line 600.
+(pdftex.def)             Requested size: 150.32503pt x 112.74515pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 580--606
+
+ []
+
+<./src/2f_v_change/faceCalibrated_mu_1_v_0.1_lambda_1.png, id=252, 462.528pt x 
+346.896pt>
+File: ./src/2f_v_change/faceCalibrated_mu_1_v_0.1_lambda_1.png Graphic file (ty
+pe png)
+<use ./src/2f_v_change/faceCalibrated_mu_1_v_0.1_lambda_1.png>
+Package pdftex.def Info: ./src/2f_v_change/faceCalibrated_mu_1_v_0.1_lambda_1.p
+ng  used on input line 614.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+<./src/2f_v_change/faceCalibrated_mu_1_v_1_lambda_1.png, id=253, 462.528pt x 34
+6.896pt>
+File: ./src/2f_v_change/faceCalibrated_mu_1_v_1_lambda_1.png Graphic file (type
+ png)
+<use ./src/2f_v_change/faceCalibrated_mu_1_v_1_lambda_1.png>
+Package pdftex.def Info: ./src/2f_v_change/faceCalibrated_mu_1_v_1_lambda_1.png
+  used on input line 621.
+(pdftex.def)             Requested size: 150.32503pt x 112.74515pt.
+<./src/2f_v_change/faceCalibrated_mu_1_v_10_lambda_1.png, id=254, 462.528pt x 3
+46.896pt>
+File: ./src/2f_v_change/faceCalibrated_mu_1_v_10_lambda_1.png Graphic file (typ
+e png)
+<use ./src/2f_v_change/faceCalibrated_mu_1_v_10_lambda_1.png>
+Package pdftex.def Info: ./src/2f_v_change/faceCalibrated_mu_1_v_10_lambda_1.pn
+g  used on input line 628.
+(pdftex.def)             Requested size: 150.32503pt x 112.74515pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 608--634
+
+ []
+
+[20 <./src/2f_mu_change/faceCalibrated_mu_-0.1_v_1_lambda_1.png> <./src/2f_mu_c
+hange/faceCalibrated_mu_-1_v_1_lambda_1.png> <./src/2f_mu_change/faceCalibrated
+_mu_-10_v_1_lambda_1.png> <./src/2f_mu_change/faceCalibrated_mu_0.1_v_1_lambda_
+1.png> <./src/2f_mu_change/faceCalibrated_mu_1_v_1_lambda_1.png> <./src/2f_mu_c
+hange/faceCalibrated_mu_10_v_1_lambda_1.png> <./src/2f_v_change/faceCalibrated_
+mu_1_v_-0.1_lambda_1.png> <./src/2f_v_change/faceCalibrated_mu_1_v_-1_lambda_1.
+png> <./src/2f_v_change/faceCalibrated_mu_1_v_-10_lambda_1.png>]
+<./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_-0.1.png, id=274, 462.52
+8pt x 346.896pt>
+File: ./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_-0.1.png Graphic fi
+le (type png)
+<use ./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_-0.1.png>
+Package pdftex.def Info: ./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_
+-0.1.png  used on input line 641.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+<./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_-1.png, id=275, 462.528p
+t x 346.896pt>
+File: ./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_-1.png Graphic file
+ (type png)
+<use ./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_-1.png>
+Package pdftex.def Info: ./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_
+-1.png  used on input line 648.
+(pdftex.def)             Requested size: 150.32503pt x 112.74515pt.
+<./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_-10.png, id=276, 462.528
+pt x 346.896pt>
+File: ./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_-10.png Graphic fil
+e (type png)
+<use ./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_-10.png>
+Package pdftex.def Info: ./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_
+-10.png  used on input line 655.
+(pdftex.def)             Requested size: 150.32503pt x 112.74515pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 635--661
+
+ []
+
+<./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_0.1.png, id=277, 462.528
+pt x 346.896pt>
+File: ./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_0.1.png Graphic fil
+e (type png)
+<use ./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_0.1.png>
+Package pdftex.def Info: ./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_
+0.1.png  used on input line 669.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+<./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_1.png, id=278, 462.528pt
+ x 346.896pt>
+File: ./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_1.png Graphic file 
+(type png)
+<use ./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_1.png>
+Package pdftex.def Info: ./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_
+1.png  used on input line 676.
+(pdftex.def)             Requested size: 150.32503pt x 112.74515pt.
+<./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_10.png, id=279, 462.528p
+t x 346.896pt>
+File: ./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_10.png Graphic file
+ (type png)
+<use ./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_10.png>
+Package pdftex.def Info: ./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_
+10.png  used on input line 683.
+(pdftex.def)             Requested size: 150.32503pt x 112.74515pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 663--689
+
+ []
+
+[21 <./src/2f_v_change/faceCalibrated_mu_1_v_0.1_lambda_1.png> <./src/2f_v_chan
+ge/faceCalibrated_mu_1_v_1_lambda_1.png> <./src/2f_v_change/faceCalibrated_mu_1
+_v_10_lambda_1.png> <./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_-0.1
+.png> <./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_-1.png> <./src/2f_
+lambda_change/faceCalibrated_mu_1_v_1_lambda_-10.png> <./src/2f_lambda_change/f
+aceCalibrated_mu_1_v_1_lambda_0.1.png> <./src/2f_lambda_change/faceCalibrated_m
+u_1_v_1_lambda_1.png> <./src/2f_lambda_change/faceCalibrated_mu_1_v_1_lambda_10
+.png>] [22]
+<./src/2g_flattest_result/faceCalibrated_mu_10_v_1_lambda_0.001.png, id=303, 46
+2.528pt x 346.896pt>
+File: ./src/2g_flattest_result/faceCalibrated_mu_10_v_1_lambda_0.001.png Graphi
+c file (type png)
+<use ./src/2g_flattest_result/faceCalibrated_mu_10_v_1_lambda_0.001.png>
+Package pdftex.def Info: ./src/2g_flattest_result/faceCalibrated_mu_10_v_1_lamb
+da_0.001.png  used on input line 700.
+(pdftex.def)             Requested size: 375.82423pt x 281.86818pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 698--706
+
+ []
+
+<./src/2g_all_change/faceCalibrated_mu_1_v_1_lambda_1.png, id=304, 462.528pt x 
+346.896pt>
+File: ./src/2g_all_change/faceCalibrated_mu_1_v_1_lambda_1.png Graphic file (ty
+pe png)
+<use ./src/2g_all_change/faceCalibrated_mu_1_v_1_lambda_1.png>
+Package pdftex.def Info: ./src/2g_all_change/faceCalibrated_mu_1_v_1_lambda_1.p
+ng  used on input line 711.
+(pdftex.def)             Requested size: 155.02pt x 116.26512pt.
+<./src/2g_all_change/faceCalibrated_mu_5_v_5_lambda_5.png, id=305, 462.528pt x 
+346.896pt>
+File: ./src/2g_all_change/faceCalibrated_mu_5_v_5_lambda_5.png Graphic file (ty
+pe png)
+<use ./src/2g_all_change/faceCalibrated_mu_5_v_5_lambda_5.png>
+Package pdftex.def Info: ./src/2g_all_change/faceCalibrated_mu_5_v_5_lambda_5.p
+ng  used on input line 718.
+(pdftex.def)             Requested size: 150.32503pt x 112.74515pt.
+<./src/2g_all_change/faceCalibrated_mu_10_v_10_lambda_10.png, id=306, 462.528pt
+ x 346.896pt>
+File: ./src/2g_all_change/faceCalibrated_mu_10_v_10_lambda_10.png Graphic file 
+(type png)
+<use ./src/2g_all_change/faceCalibrated_mu_10_v_10_lambda_10.png>
+Package pdftex.def Info: ./src/2g_all_change/faceCalibrated_mu_10_v_10_lambda_1
+0.png  used on input line 725.
+(pdftex.def)             Requested size: 150.32503pt x 112.74515pt.
+[23 <./src/2g_flattest_result/faceCalibrated_mu_10_v_1_lambda_0.001.png> <./src
+/2g_all_change/faceCalibrated_mu_1_v_1_lambda_1.png> <./src/2g_all_change/faceC
+alibrated_mu_5_v_5_lambda_5.png> <./src/2g_all_change/faceCalibrated_mu_10_v_10
+_lambda_10.png>] [24]
+Overfull \hbox (33.49088pt too wide) in paragraph at lines 743--744
+[][]$\OT1/cmtt/m/n/10 https : / / www2 . eecs . berkeley . edu / Research / Pro
+jects / CS / vision / classes / cs294-[]appearance _ models /
+ []
+
+[25] (bochunc.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -588,26 +1022,33 @@ Package rerunfilecheck Info: File `bochunc.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 11627 strings out of 474486
- 185754 string characters out of 5740416
- 1940542 words of memory out of 5000000
- 33747 multiletter control sequences out of 15000+600000
- 562392 words of font info for 55 fonts, out of 8000000 for 9000
+ 12197 strings out of 474486
+ 203050 string characters out of 5740416
+ 1944542 words of memory out of 5000000
+ 34224 multiletter control sequences out of 15000+600000
+ 566326 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,22n,79p,546b,461s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,22n,79p,866b,591s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Patrick Chen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmbx10.pfb><C:/Users/Patrick Chen/AppData/Local/Programs/MiKTeX/fonts/ty
 pe1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Patrick Chen/AppData/Local/Programs
 /MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/Patrick Chen/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Patr
-ick Chen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb
-><C:/Users/Patrick Chen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmr12.pfb><C:/Users/Patrick Chen/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Patrick Chen/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on bochunc.pdf (5 pages, 1123370 bytes).
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Patr
+ick Chen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pf
+b><C:/Users/Patrick Chen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmmi7.pfb><C:/Users/Patrick Chen/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Patrick Chen/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Patrick Chen/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Patrick
+ Chen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:
+/Users/Patrick Chen/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmr9.pfb><C:/Users/Patrick Chen/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb><C:/Users/Patrick Chen/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Patrick Chen/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on bochunc.pdf (26 pages, 4629565 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
- 29 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 424 PDF objects out of 1000 (max. 8388607)
+ 109 named destinations out of 1000 (max. 500000)
+ 251 words of extra memory for PDF output out of 10000 (max. 10000000)
 

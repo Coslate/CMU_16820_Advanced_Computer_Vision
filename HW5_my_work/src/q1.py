@@ -148,8 +148,8 @@ def estimatePseudonormalsCalibrated(I, L):
         The 3 x P matrix of pesudonormals
     """
 
-    B = np.linalg.inv(L@L.T)@(L@I)
     # Your code here
+    B = np.linalg.inv(L@L.T)@(L@I)
     return B
 
 
@@ -257,7 +257,6 @@ def estimateShape(normals, s):
 
 if __name__ == "__main__":
     # Part 1(b)
-    '''
     radius = 0.75  # cm
     center = np.asarray([0, 0, 0])  # cm
     pxSize = 7  # um
@@ -280,13 +279,13 @@ if __name__ == "__main__":
     plt.figure()
     plt.imshow(image, cmap="gray")
     plt.imsave("1b-c.png", image, cmap="gray")
-    '''
 
 
     # Part 1(c)
     I, L, s = loadData("../data/")
     #print(f"I.shape = {I.shape}")
     #print(f"s = {s}")
+    print(f"L = {L}")
     
     '''
     # test code
